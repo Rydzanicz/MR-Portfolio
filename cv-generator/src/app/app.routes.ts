@@ -1,11 +1,15 @@
-import { Routes } from '@angular/router';
-import { CVFormComponent } from './components/cv-form/cv-form.component';
-import { CVPreviewComponent } from './components/cv-preview/cv-preview.component';
-import { PDFGeneratorComponent } from './components/pdf-generator/pdf-generator.component';
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+import { CvPageComponent } from './cv-page/cv-page.component';
 
 export const routes: Routes = [
-  { path: 'form', component: CVFormComponent },
-  { path: 'preview', component: CVPreviewComponent },
-  { path: 'download', component: PDFGeneratorComponent },
-  { path: '', redirectTo: '/form', pathMatch: 'full' }
+  { path: '', redirectTo: 'cv', pathMatch: 'full' },
+  { path: 'cv', component: CvPageComponent },
+  { path: '**', redirectTo: 'cv' },
 ];
+
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule],
+})
+export class AppRoutingModule {}
