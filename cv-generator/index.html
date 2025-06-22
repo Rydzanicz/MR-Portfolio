@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Michał Rydzanicz - CV</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- PDF Generation Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+    <div class="cv-container" id="cv-content">
+        <!-- Left Column -->
+        <div class="left-column">
+            <!-- Profile Photo -->
+            <div class="profile-photo">
+                <div class="avatar">
+                    <i class="fas fa-user"></i>
+                </div>
+            </div>
+
+            <!-- Contact Information -->
+            <div class="contact-section">
+                <h3 class="section-title">KONTAKT</h3>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>48 785 640 173</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>rydzanicz.mm@gmail.com</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Wrocław, 54-237</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-github"></i>
+                    <span>github.com/Rydzanicz</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-linkedin"></i>
+                    <span>linkedin.com/in/michał-rydzanicz-97307827b</span>
+                </div>
+            </div>
+
+            <!-- Skills Section -->
+            <div class="skills-section">
+                <h3 class="section-title">UMIEJĘTNOŚCI</h3>
+                <div class="skill-item">
+                    <div class="skill-name">Java</div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-level="60"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">Spring Framework</div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-level="55"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">Angular</div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-level="55"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">SQL</div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-level="55"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">Docker</div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-level="40"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">Git</div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-level="60"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">Python</div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-level="35"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">JavaScript/TypeScript</div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-level="50"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">AI/ML</div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-level="35"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Languages Section -->
+            <div class="languages-section">
+                <h3 class="section-title">JĘZYKI</h3>
+                <div class="language-item">
+                    <span class="language-name">Polski</span>
+                    <span class="language-level">Ojczysty</span>
+                </div>
+                <div class="language-item">
+                    <span class="language-name">Angielski</span>
+                    <span class="language-level">B1</span>
+                </div>
+            </div>
+
+            <!-- Additional Section -->
+            <div class="additional-section">
+                <h3 class="section-title">DODATKOWE</h3>
+                <div class="additional-item">
+                    <i class="fas fa-car"></i>
+                    <span>Prawo jazdy kat. B</span>
+                </div>
+                <div class="additional-item">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <span>Gotowość do relokacji</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Column -->
+        <div class="right-column">
+            <!-- Header -->
+            <div class="header-section">
+                <h1 class="main-name">MICHAŁ RYDZANICZ</h1>
+                <h2 class="main-title">FULL-STACK DEVELOPER</h2>
+            </div>
+
+            <!-- Profile Section -->
+            <div class="profile-section">
+                <h3 class="section-heading">
+                    <i class="fas fa-user-circle"></i>
+                    PROFIL
+                </h3>
+                <p class="profile-text">
+                    Doświadczony full-stack developer z ponad 3-letnim doświadczeniem w branży IT. Specjalizuję się w projektowaniu i wdrażaniu rozwiązań Java/Spring oraz tworzeniu nowoczesnych interfejsów Angular. Mam doświadczenie w automatyzacji procesów biznesowych oraz optymalizacji wydajności systemów. Poszukuję nowych wyzwań technologicznych w środowisku, które ceni innowacyjność i rozwój.
+                </p>
+            </div>
+
+            <!-- Experience Section -->
+            <div class="experience-section">
+                <h3 class="section-heading">
+                    <i class="fas fa-briefcase"></i>
+                    DOŚWIADCZENIE ZAWODOWE
+                </h3>
+                <div class="experience-item">
+                    <div class="job-header">
+                        <h4 class="company-name">Fullstack</h4>
+                        <span class="job-period">styczeń 2025 – obecnie</span>
+                    </div>
+                    <div class="job-details">
+                        <h5 class="job-title">Full-Stack Developer</h5>
+                        <span class="job-location">Wrocław</span>
+                    </div>
+                    <ul class="achievements">
+                        <li>Rozwój aplikacji webowych z wykorzystaniem Angular i Spring</li>
+                        <li>Implementacja rozwiązań automatyzacji procesów</li>
+                        <li>Projektowanie interfejsów użytkownika</li>
+                        <li>Integracja API systemów płatności i mailowych</li>
+                    </ul>
+                </div>
+                <div class="experience-item">
+                    <div class="job-header">
+                        <h4 class="company-name">Cinkciarz.pl</h4>
+                        <span class="job-period">czerwiec 2021 – grudzień 2024</span>
+                    </div>
+                    <div class="job-details">
+                        <h5 class="job-title">Full-Stack Developer</h5>
+                        <span class="job-location">Zielona Góra</span>
+                    </div>
+                    <ul class="achievements">
+                        <li>Tworzenie innowacyjnych narzędzi bankowych i pożyczkowych w Java, Spring, MySQL, Rest Api i microservice</li>
+                        <li>Implementacja automatycznych harmonogramów spłat, systemu nadpłat i dystrybucji zobowiązań</li>
+                        <li>Optymalizacja kodu i wydajności systemów</li>
+                        <li>Rozwój interfejsów użytkownika w Angular</li>
+                        <li>Integracja frontendu z backendem, zapewnienie spójności i wysokiej wydajności</li>
+                        <li>Praca z Docker, GCP, GIT</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Education Section -->
+            <div class="education-section">
+                <h3 class="section-heading">
+                    <i class="fas fa-graduation-cap"></i>
+                    WYKSZTAŁCENIE
+                </h3>
+                <div class="education-item">
+                    <div class="education-header">
+                        <h4 class="institution-name">Uniwersytet Zielonogórski</h4>
+                        <span class="education-period">2023</span>
+                    </div>
+                    <h5 class="degree-name">Dyplom ukończenia studiów technicznych</h5>
+                    <ul class="education-details">
+                        <li>Przewodniczący koła naukowego (organizacja dni otwartych, warsztatów, wydarzeń technologicznych)</li>
+                        <li>Rozwijanie umiejętności w Java, Kotlin, Spring, SQL, Angular</li>
+                        <li>Aktywna praca w zespołach projektowych, metodyki Agile/Scrum</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Projects Section -->
+            <div class="projects-section">
+                <h3 class="section-heading">
+                    <i class="fas fa-code"></i>
+                    PROJEKTY
+                </h3>
+                <ul class="projects-list">
+                    <li>Rozwój narzędzi automatyzujących procesy biznesowe (Java, Spring, Angular)</li>
+                    <li>Projekty dostępne na GitHub: github.com/Rydzanicz</li>
+                </ul>
+            </div>
+
+            <!-- Download Button -->
+            <div class="download-section">
+                <button class="btn btn--primary download-btn" onclick="downloadPDF()">
+                    <i class="fas fa-download"></i>
+                    Pobierz PDF
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
