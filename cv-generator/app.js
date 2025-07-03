@@ -68,18 +68,24 @@ function addSmoothScrolling() {
     });
 }
 
-// Handle PDF download with actual PDF generation
+// Handle PDF download with actual PDF generation (ZMODYFIKOWANA WERSJA)
 function downloadPDF() {
     // Show loading state
     const downloadBtn = document.querySelector('.download-btn');
     const originalText = downloadBtn.innerHTML;
-    
+
     downloadBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Generowanie PDF...';
     downloadBtn.disabled = true;
-    
+
     // Get the CV container element
     const cvContainer = document.getElementById('cv-content');
-    
+
+    // NOWOŚĆ: Ukryj przycisk przed generowaniem PDF
+    const buttonsToHide = document.querySelectorAll('.download-btn, .download-section');
+    buttonsToHide.forEach(btn => {
+        btn.style.display = 'none';
+    });
+
     // Configure html2canvas options for high quality
     const options = {
         useCORS: true,
@@ -97,7 +103,11 @@ function downloadPDF() {
                 bar.style.width = level + '%';
                 bar.style.transition = 'none';
             });
-            
+
+            // NOWOŚĆ: Upewnij się że przyciski są ukryte w klonie
+            const buttonsInClone = clonedDoc.querySelectorAll('.download-btn, .download-section, button');
+            buttonsInClone.forEach(btn => btn.remove());
+
             // Ensure fonts are loaded
             const clonedContainer = clonedDoc.getElementById('cv-content');
             if (clonedContainer) {
@@ -105,7 +115,7 @@ function downloadPDF() {
             }
         }
     };
-    
+
     // Generate PDF
     html2canvas(cvContainer, options)
         .then(canvas => {
@@ -116,35 +126,35 @@ function downloadPDF() {
                 unit: 'mm',
                 format: 'a4'
             });
-            
+
             // A4 dimensions in mm
             const pdfWidth = 210;
             const pdfHeight = 297;
-            
+
             // Calculate scaling to fit content properly
             const canvasWidth = canvas.width;
             const canvasHeight = canvas.height;
             const ratio = canvasWidth / canvasHeight;
-            
+
             let imgWidth = pdfWidth - 20; // 10mm margin on each side
             let imgHeight = imgWidth / ratio;
-            
+
             // If height exceeds page, scale down
             if (imgHeight > pdfHeight - 20) {
                 imgHeight = pdfHeight - 20;
                 imgWidth = imgHeight * ratio;
             }
-            
+
             // Center the image on the page
             const x = (pdfWidth - imgWidth) / 2;
             const y = (pdfHeight - imgHeight) / 2;
-            
+
             // Add the image to PDF
             pdf.addImage(imgData, 'PNG', x, y, imgWidth, imgHeight, '', 'FAST');
-            
+
             // Save the PDF
             pdf.save('Michal_Rydzanicz_CV.pdf');
-            
+
             // Show success notification
             showNotification('PDF został wygenerowany i pobrany pomyślnie!', 'success');
         })
@@ -153,6 +163,11 @@ function downloadPDF() {
             showNotification('Wystąpił błąd podczas generowania PDF. Spróbuj ponownie.', 'error');
         })
         .finally(() => {
+            // NOWOŚĆ: Przywróć widoczność przycisków
+            buttonsToHide.forEach(btn => {
+                btn.style.display = '';
+            });
+
             // Reset button state
             downloadBtn.innerHTML = originalText;
             downloadBtn.disabled = false;
