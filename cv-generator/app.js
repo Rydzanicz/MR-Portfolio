@@ -324,53 +324,6 @@ function addHoverEffects() {
     });
 }
 
-// Initialize animations with Intersection Observer
-function initializeAnimations() {
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
-    
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.animation = 'fadeInUp 0.6s ease-out forwards';
-                observer.unobserve(entry.target);
-            }
-        });
-    }, observerOptions);
-    
-    // Add fade-in animation styles
-    if (!document.querySelector('#animation-styles')) {
-        const styles = document.createElement('style');
-        styles.id = 'animation-styles';
-        styles.textContent = `
-            @keyframes fadeInUp {
-                from {
-                    opacity: 0;
-                    transform: translateY(30px);
-                }
-                to {
-                    opacity: 1;
-                    transform: translateY(0);
-                }
-            }
-            
-            .animate-on-scroll {
-                opacity: 0;
-            }
-        `;
-        document.head.appendChild(styles);
-    }
-    
-    // Observe elements for animation
-    const animatedElements = document.querySelectorAll('.experience-item, .education-item, .profile-section');
-    animatedElements.forEach(el => {
-        el.classList.add('animate-on-scroll');
-        observer.observe(el);
-    });
-}
-
 // Initialize contact handlers
 function initializeContactHandlers() {
     const contactItems = document.querySelectorAll('.contact-item');
