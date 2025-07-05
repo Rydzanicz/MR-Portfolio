@@ -916,13 +916,6 @@ a:hover {
   margin-bottom: var(--space-8);
 }
 
-.skill-bar {
-  background-color: rgba(255, 255, 255, 0.2);
-  height: 8px;
-  border-radius: var(--radius-full);
-  overflow: hidden;
-}
-
 .skill-progress {
   height: 100%;
   background: linear-gradient(90deg, #27AE60, #2ECC71);

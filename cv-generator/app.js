@@ -25,27 +25,8 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeContactHandlers();
 });
 
-// Initialize skill bars to 0% width
-function initializeSkillBars() {
-    const skillBars = document.querySelectorAll('.skill-progress');
-    skillBars.forEach(bar => {
-        bar.style.width = '0%';
-    });
-}
 
-// Animate skill progress bars
-function animateSkillBars() {
-    const skillBars = document.querySelectorAll('.skill-progress');
-    
-    skillBars.forEach((bar, index) => {
-        const level = bar.getAttribute('data-level');
-        
-        // Add delay for staggered animation
-        setTimeout(() => {
-            bar.style.width = level + '%';
-        }, index * 100);
-    });
-}
+
 
 // Add smooth scrolling for internal links
 function addSmoothScrolling() {
@@ -97,12 +78,6 @@ function downloadPDF() {
         logging: false,
         onclone: function(clonedDoc) {
             // Ensure skill bars are fully visible in the clone
-            const skillBars = clonedDoc.querySelectorAll('.skill-progress');
-            skillBars.forEach(bar => {
-                const level = bar.getAttribute('data-level');
-                bar.style.width = level + '%';
-                bar.style.transition = 'none';
-            });
 
             // NOWOŚĆ: Upewnij się że przyciski są ukryte w klonie
             const buttonsInClone = clonedDoc.querySelectorAll('.download-btn, .download-section, button');
@@ -261,11 +236,6 @@ function addPrintSupport() {
     // Add print styles dynamically if needed
     window.addEventListener('beforeprint', function() {
         // Ensure skill bars are fully visible for print
-        const skillBars = document.querySelectorAll('.skill-progress');
-        skillBars.forEach(bar => {
-            const level = bar.getAttribute('data-level');
-            bar.style.width = level + '%';
-        });
     });
 }
 
