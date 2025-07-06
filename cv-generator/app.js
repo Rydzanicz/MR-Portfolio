@@ -62,10 +62,8 @@ function downloadPDF() {
                 imgWidth = imgHeight * ratio;
             }
 
-            const x = 0;
-            const y = 0;
 
-            pdf.addImage(imgData, 'PNG', x, y, imgWidth, imgHeight, '', 'FAST');
+            pdf.addImage(imgData, 'PNG', 0, 0, imgWidth, imgHeight, '', 'FAST');
 
             // Save the PDF
             pdf.save('Michal_Rydzanicz_CV.pdf');
