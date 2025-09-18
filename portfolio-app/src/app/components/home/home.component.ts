@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import {NgForOf, NgIf} from '@angular/common';
-import {TranslatePipe} from '../../pipes/translate.pipe';
+import {NgForOf, NgIf} from "@angular/common";
+import {RouterLink} from "@angular/router";
+import {TranslatePipe} from "../../pipes/translate.pipe";
 
 interface Project {
   id: number;
@@ -17,6 +18,7 @@ interface Project {
   templateUrl: './home.component.html',
   imports: [
     NgForOf,
+    RouterLink,
     NgIf,
     TranslatePipe
   ],

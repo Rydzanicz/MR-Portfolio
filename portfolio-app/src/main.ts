@@ -1,12 +1,8 @@
+/// <reference types="@angular/localize" />
+
 import { bootstrapApplication } from '@angular/platform-browser';
-import { provideRouter } from '@angular/router';
-
+import { appConfig } from './app/app.config';
 import { AppComponent } from './app/app.component';
-import { routes } from './app/app.config';  // upewnij się, że 'routes' są eksportowane z app.config.ts
 
-
-bootstrapApplication(AppComponent, {
-  providers: [
-    provideRouter(routes)
-  ]
-}).catch(err => console.error(err));
+bootstrapApplication(AppComponent, appConfig)
+  .catch((err) => console.error(err));

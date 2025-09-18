@@ -47,8 +47,8 @@ export class PdfGeneratorService {
       pdf.addImage(imgData, 'PNG', 0, 0, imgWidth, imgHeight);
 
       const fileName = language === 'pl' ?
-        'Michal_Rydzanicz_CV_PL.pdf' :
-        'Michal_Rydzanicz_CV_EN.pdf';
+          'Michal_Rydzanicz_CV_PL.pdf' :
+          'Michal_Rydzanicz_CV_EN.pdf';
 
       pdf.save(fileName);
 

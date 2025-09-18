@@ -22,9 +22,9 @@ export class TranslationService {
 
   private loadTranslations(lang: string) {
     this.http.get(`/assets/i18n/messages.${lang}.json`)
-      .subscribe(translations => {
-        this.translations = translations;
-      });
+        .subscribe(translations => {
+          this.translations = translations;
+        });
   }
 
   getTranslation(key: string): string {

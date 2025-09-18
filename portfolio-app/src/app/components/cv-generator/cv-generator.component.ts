@@ -1,54 +1,94 @@
-import { Component, OnInit } from '@angular/core';
-import {NgForOf} from '@angular/common';
+import { Component } from '@angular/core';
+import { PdfGeneratorService } from '../../services/pdf-generator.service';
+import { TranslationService } from '../../services/translation.service';
 
-interface WorkExperience {
-  company: string;
-  position: string;
-  startDate: string;
-  endDate?: string;
-  description: string[];
+interface CVData {
+  personalInfo: {
+    name: string;
+    title: string;
+    email: string;
+    phone: string;
+    location: string;
+    linkedin: string;
+    github: string;
+  };
+  summary: string;
+  experience: Array<{
+    company: string;
+    position: string;
+    period: string;
+    description: string[];
+  }>;
+  education: Array<{
+    institution: string;
+    degree: string;
+    period: string;
+    description?: string;
+  }>;
+  skills: string[];
+  languages: Array<{
+    language: string;
+    level: string;
+  }>;
 }
 
 @Component({
   selector: 'app-cv-generator',
   templateUrl: './cv-generator.component.html',
-  imports: [
-    NgForOf
-  ],
   styleUrls: ['./cv-generator.component.scss']
 })
-export class CvGeneratorComponent implements OnInit {
+export class CvGeneratorComponent {
+  currentLanguage = 'pl';
 
-  workExperiences: WorkExperience[] = [
-    {
-      company: 'Cinkciarz.pl',
-      position: 'Full-Stack Developer',
-      startDate: 'czerwiec 2021',
-      endDate: 'grudzień 2024',
-      description: [
-        'Tworzenie innowacyjnych narzędzi bankowych i pożyczkowych w Java, Spring, MySQL, Rest Api i microservice',
-        'Implementacja automatycznych harmonogramów spłat, systemu nadpłat i dystrybucji zobowiązań',
-        'Optymalizacja kodu i wydajności systemów',
-        'Rozwój interfejsów użytkownika w Angular',
-        'Integracja frontendu z backendem, zapewnienie spójności i wysokiej wydajności',
-        'Praca z Docker, GCP, GIT'
-      ]
+  cvData: CVData = {
+    personalInfo: {
+      name: 'Michał Rydzanicz',
+      title: 'Full-Stack Developer',
+      email: 'rydzanicz.mm@gmail.com',
+      phone: '48 785 640 173',
+      location: 'Wrocław, 54-237',
+      linkedin: 'linkedin.com/in/michał-rydzanicz-97307827b',
+      github: 'github.com/Rydzanicz'
     },
-    {
-      company: 'Fullstack',
-      position: 'Full-Stack Developer',
-      startDate: 'styczeń 2025',
-      description: [
-        'Rozwój aplikacji webowych z wykorzystaniem Angular i Spring',
-        'Implementacja rozwiązań automatyzacji procesów',
-        'Projektowanie interfejsów użytkownika',
-        'Integracja API systemów płatności i mailowych'
-      ]
-    }
-  ];
+    summary: 'Doświadczony full-stack developer z ponad 3-letnim doświadczeniem...',
+    experience: [
+      {
+        company: 'Fullstack',
+        position: 'Full-Stack Developer',
+        period: 'styczeń 2025 – obecnie',
+        description: [
+          'Rozwój aplikacji webowych z wykorzystaniem Angular i Spring',
+          'Implementacja rozwiązań automatyzacji procesów'
+        ]
+      }
+    ],
+    education: [
+      {
+        institution: 'Uniwersytet Zielonogórski',
+        degree: 'Dyplom ukończenia studiów technicznych',
+        period: '2023'
+      }
+    ],
+    skills: [
+      'Java 21+', 'Spring Framework', 'Angular', 'TypeScript',
+      'MySQL', 'PostgreSQL', 'Docker', 'GCP', 'Jenkins', 'Git'
+    ],
+    languages: [
+      { language: 'Polski', level: 'Ojczysty' },
+      { language: 'Angielski', level: 'B1 / B2' }
+    ]
+  };
 
-  constructor() { }
+  constructor(
+      private pdfService: PdfGeneratorService,
+      private translationService: TranslationService
+  ) {
+    this.translationService.currentLanguage$.subscribe(lang => {
+      this.currentLanguage = lang;
+    });
+  }
 
-  ngOnInit(): void { }
-
+  downloadPDF() {
+    this.pdfService.generateCV(this.cvData, this.currentLanguage);
+  }
 }

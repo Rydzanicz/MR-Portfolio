@@ -1,14 +1,13 @@
 import { Component } from '@angular/core';
 import { TranslationService } from '../../services/translation.service';
-import {RouterLinkActive} from '@angular/router';
-import {TranslatePipe} from '../../pipes/translate.pipe';
+import {RouterLink, RouterLinkActive} from "@angular/router";
 
 @Component({
   selector: 'app-navigation',
   templateUrl: './navigation.component.html',
   imports: [
-    RouterLinkActive,
-    TranslatePipe
+    RouterLink,
+    RouterLinkActive
   ],
   styleUrls: ['./navigation.component.scss']
 })

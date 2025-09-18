@@ -1,33 +1,22 @@
-import {NgModule} from '@angular/core';
-import {BrowserModule} from '@angular/platform-browser';
-import {HttpClientModule} from '@angular/common/http';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-
-import {AppComponent} from './app.component';
-import {HomeComponent} from './components/home/home.component';
-import {PortfolioComponent} from './components/portfolio/portfolio.component';
-import {CvGeneratorComponent} from './components/cv-generator/cv-generator.component';
-import {NavigationComponent} from './components/navigation/navigation.component';
-import {TranslatePipe} from './pipes/translate.pipe';
-import {AppRoutingModule} from './app.routes';
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {AppRoutingModule} from "./app.routes";
+import {TranslatePipe} from "./pipes/translate.pipe";
 
 @NgModule({
-  declarations: [],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    FormsModule,
-    ReactiveFormsModule,
-    NavigationComponent,
-    PortfolioComponent,
-    HomeComponent,
-    AppComponent,
-    CvGeneratorComponent,
-    TranslatePipe
-  ],
-  providers: [],
-  bootstrap: []
+    declarations: [
+    ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        HttpClientModule,
+        FormsModule,
+        TranslatePipe,
+        ReactiveFormsModule
+    ],
+    providers: [],
+    bootstrap: []
 })
-export class AppModule {
-}
+export class AppModule { }
