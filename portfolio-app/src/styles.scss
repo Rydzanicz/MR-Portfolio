@@ -1,0 +1,66 @@
+// Importy
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+// Zmienne
+:root {
+  --primary-color: #27AE60;
+  --secondary-color: #2C3E50;
+  --accent-color: #3498DB;
+  --text-color: #2C3E50;
+  --background-color: #FFFFFF;
+  --border-color: #ECF0F1;
+}
+
+// Style bazowe
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
+// Przyciski
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary-color), #2ECC71);
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(39, 174, 96, 0.4);
+  }
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+  padding: 10px 22px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: var(--primary-color);
+    color: white;
+  }
+}
+
+// Responsywność
+@media (max-width: 768px) {
+  .container {
+    padding: 0 15px;
+  }
+}

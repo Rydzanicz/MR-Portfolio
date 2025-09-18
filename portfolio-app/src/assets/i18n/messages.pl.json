@@ -1,0 +1,11 @@
+{
+  "nav.home": "Strona główna",
+  "nav.portfolio": "Portfolio",
+  "nav.cv": "Generator CV",
+  "home.title": "Witaj w moim portfolio",
+  "home.subtitle": "Full-Stack Developer",
+  "cv.download": "Pobierz CV",
+  "cv.title": "Generator CV",
+  "projects.title": "Moje projekty",
+  "about.title": "O mnie"
+}
