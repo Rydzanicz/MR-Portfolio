@@ -4,6 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {AppRoutingModule} from "./app.routes";
 import {TranslatePipe} from "./pipes/translate.pipe";
+import {CvGeneratorComponent} from "./components/cv-generator/cv-generator.component";
 
 @NgModule({
     declarations: [
@@ -11,6 +12,7 @@ import {TranslatePipe} from "./pipes/translate.pipe";
     imports: [
         BrowserModule,
         AppRoutingModule,
+        CvGeneratorComponent,
         HttpClientModule,
         FormsModule,
         TranslatePipe,
