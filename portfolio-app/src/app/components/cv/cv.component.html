@@ -1,29 +1,11 @@
-<div class="language-switcher">
-  <button
-    class="language-btn"
-    (click)="toggleLanguage()"
-    [class.active]="currentLanguage === 'pl'">
-    PL
-  </button>
-  <button
-    class="language-btn"
-    (click)="toggleLanguage()"
-    [class.active]="currentLanguage === 'en'">
-    EN
-  </button>
-</div>
-
 <div class="cv-container" #cvContent id="cv-content">
-  <!-- Left Column -->
   <div class="left-column">
-    <!-- Profile Photo -->
     <div class="profile-photo">
       <div class="avatar">
         <img src="assets/profil.jpg" alt="Zdjęcie profilowe" class="avatar-img">
       </div>
     </div>
 
-    <!-- Contact Information -->
     <div class="contact-section">
       <h3 class="section-title">{{ translation.contact }}</h3>
       <div class="contact-item">
@@ -32,7 +14,7 @@
       </div>
       <div class="contact-item">
         <i class="fas fa-envelope"></i>
-        <span>rydzanicz.mmgmail.com</span>
+        <span>rydzanicz.mm&#64;gmail.com</span>
       </div>
       <div class="contact-item">
         <i class="fas fa-map-marker-alt"></i>
@@ -48,7 +30,6 @@
       </div>
     </div>
 
-    <!-- Skills Section -->
     <div class="skills-section">
       <h3 class="section-title">{{ translation.skills }}</h3>
       <div class="skill-item" *ngFor="let skill of translation.skillsList">
@@ -56,7 +37,6 @@
       </div>
     </div>
 
-    <!-- Languages Section -->
     <div class="languages-section">
       <h3 class="section-title">{{ translation.languages }}</h3>
       <div class="language-item" *ngFor="let lang of translation.languagesList">
@@ -65,7 +45,6 @@
       </div>
     </div>
 
-    <!-- Additional Section -->
     <div class="additional-section">
       <h3 class="section-title">{{ translation.additional }}</h3>
       <div class="additional-item" *ngFor="let item of translation.additionalList">
@@ -75,15 +54,12 @@
     </div>
   </div>
 
-  <!-- Right Column -->
   <div class="right-column">
-    <!-- Header -->
     <div class="header-section">
       <h1 class="main-name">MICHAŁ RYDZANICZ</h1>
       <h2 class="main-title">{{ translation.currentPosition }}</h2>
     </div>
 
-    <!-- Profile Section -->
     <div class="profile-section">
       <h3 class="section-heading">
         <i class="fas fa-user-circle"></i>
@@ -92,7 +68,6 @@
       <p class="profile-text">{{ translation.profileDescription }}</p>
     </div>
 
-    <!-- Experience Section -->
     <div class="experience-section">
       <h3 class="section-heading">
         <i class="fas fa-briefcase"></i>
@@ -113,7 +88,6 @@
       </div>
     </div>
 
-    <!-- Education Section -->
     <div class="education-section">
       <h3 class="section-heading">
         <i class="fas fa-graduation-cap"></i>
@@ -131,7 +105,6 @@
       </div>
     </div>
 
-    <!-- Projects Section -->
     <div class="projects-section">
       <h3 class="section-heading">
         <i class="fas fa-code"></i>
@@ -142,7 +115,6 @@
       </ul>
     </div>
 
-    <!-- Download Button -->
     <div class="download-section">
       <button
         class="btn btn--primary download-btn"
@@ -150,6 +122,10 @@
         [innerHTML]="getDownloadButtonText()"
         (click)="downloadPDF()">
       </button>
+      <button (click)="toggleLanguage()" class="btn btn--primary download-btn language-btn">
+        {{ currentLanguage === 'pl' ? 'English' : 'Polski' }}
+      </button>
     </div>
+
   </div>
 </div>

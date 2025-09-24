@@ -10,7 +10,7 @@ import {Language, Translation, TranslationService} from '../../services/Translat
   standalone: true,
   imports: [CommonModule],
   templateUrl: './cv.component.html',
-  styleUrls: ['./cv.component.css']
+  styleUrls: ['./cv.component.scss']
 })
 export class CvComponent implements OnDestroy {
   @ViewChild('cvContent', { static: true }) cvContent!: ElementRef;
