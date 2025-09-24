@@ -12,7 +12,7 @@ import {ContactMailerService} from '../../services/ContactMailerService';
 })
 export class ContactComponent {
   name = '';
-  email = '';
+  addressEmail = '';
   message = '';
   submitted = false;
   errorMessage = '';
@@ -23,12 +23,12 @@ export class ContactComponent {
 
   onSubmit(): void {
     this.errorMessage = '';
-    if (!this.name.trim() || !this.email.trim() || !this.message.trim()) {
+    if (!this.name.trim() || !this.addressEmail.trim() || !this.message.trim()) {
       this.errorMessage = 'Proszę wypełnić wszystkie pola.';
       return;
     }
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(this.email)) {
+    if (!emailRegex.test(this.addressEmail)) {
       this.errorMessage = 'Wprowadź poprawny adres e-mail.';
       return;
     }
@@ -36,7 +36,7 @@ export class ContactComponent {
 
     this.mailer.sendContactMessage({
       name: this.name,
-      email: this.email,
+      addressEmail: this.addressEmail,
       message: this.message
     }).subscribe({
       next: () => {
