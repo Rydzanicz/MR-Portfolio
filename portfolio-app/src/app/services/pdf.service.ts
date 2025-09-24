@@ -11,7 +11,6 @@ export class PdfService {
 
   async generatePDF(element: HTMLElement, filename: string): Promise<void> {
     return new Promise((resolve, reject) => {
-      // Ukryj przyciski i przełącznik języka
       const elementsToHide = document.querySelectorAll<HTMLElement>(
         '.download-btn, .download-section, .language-switcher'
       );

@@ -6,8 +6,8 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class ContactMailerService {
-  private apiUrl = 'http://localhost:8080';
-  private apiKey = 'VIGGO=dgfs';  // Twój klucz API
+  private apiUrl = 'https://goldentagservice-147667181249.europe-west1.run.app';
+  private apiKey = 'VIGGO=4MB0ycv7IGfCs8NLB4Xl0rHLgeVCG_vDOGAZRyGHkzzjfX8pGvweLyB-a43yKF-UTKuXJNkQRMGzF7h8Q0BpdQ5j8kgEw6MYUArcvrkWq4s9_JVBBFwmBV513m3trTwlacTy93npp2CGoFpl-Ji4ExTPDgAmoLyTYeO65pyZuWzCqrU';  // Twój klucz API
 
   private http: HttpClient | undefined;
 
