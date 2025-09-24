@@ -22,7 +22,7 @@ interface Project {
   styleUrls: ['./portfolio.component.scss']
 })
 export class PortfolioComponent {
-  activeProject = 'cinkciarz';
+  activeProject = 'goldentag';
   selectedImage: string | null = null;
 
   projects: Project[] = [

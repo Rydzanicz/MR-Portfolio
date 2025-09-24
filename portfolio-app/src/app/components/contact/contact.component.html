@@ -1,0 +1,78 @@
+<div class="contact-wrapper">
+
+  <div class="contact-info contact-section">
+    <h3 class="section-title">Kontakt</h3>
+
+    <div class="contact-item">
+      <i class="fas fa-phone"></i>
+      <a href="tel:+48785640173" class="contact-link">+48 785 640 173</a>
+    </div>
+
+    <div class="contact-item">
+      <i class="fas fa-envelope"></i>
+      <a href="mailto:rydzanicz.mm@gmail.com" class="contact-link">rydzanicz.mm&#64;gmail.com</a>
+    </div>
+
+    <div class="contact-item">
+      <i class="fas fa-map-marker-alt"></i>
+      <a href="https://www.google.com/maps/search/?api=1&query=Wroc%C5%82aw+54-237" target="_blank"
+         rel="noopener noreferrer" class="contact-link">
+        54-237 Wrocław
+      </a>
+    </div>
+
+    <div class="contact-item">
+      <i class="fab fa-github"></i>
+      <a href="https://github.com/Rydzanicz" target="_blank" rel="noopener noreferrer" class="contact-link">
+        github.com/Rydzanicz
+      </a>
+    </div>
+
+    <div class="contact-item">
+      <i class="fab fa-linkedin"></i>
+      <a href="https://linkedin.com/in/michał-rydzanicz-97307827b" target="_blank" rel="noopener noreferrer"
+         class="contact-link">
+        linkedin.com/in/michał-rydzanicz-97307827b
+      </a>
+    </div>
+  </div>
+
+  <div class="contact-form contact-container">
+
+    <h3 class="section-title">Napisz do mnie</h3>
+
+    <form (ngSubmit)="onSubmit()" *ngIf="!submitted" novalidate>
+      <div class="form-group">
+        <label for="name">Imię i nazwisko</label>
+        <input id="name" type="text" [(ngModel)]="name" name="name" required autocomplete="name"/>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Adres e-mail</label>
+        <input id="email" type="email" [(ngModel)]="email" name="email" required autocomplete="email"/>
+      </div>
+
+      <div class="form-group">
+        <label for="message">Wiadomość</label>
+        <textarea id="message" [(ngModel)]="message" name="message" rows="5" required></textarea>
+      </div>
+
+      <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+
+      <button type="submit" class="btn btn-primary" [disabled]="sending">
+        <span *ngIf="!sending">Wyślij</span>
+        <span *ngIf="sending"><i class="fas fa-spinner fa-spin"></i> Wysyłanie...</span>
+      </button>
+
+      <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+      <div *ngIf="submitted" class="success-message">
+        <p>Dziękuję za kontakt! Odpowiem jak najszybciej.</p>
+      </div>
+
+    </form>
+
+    <div *ngIf="submitted" class="success-message">
+      <p>Dziękuję za kontakt! Odpowiem jak najszybciej.</p>
+    </div>
+  </div>
+</div>
