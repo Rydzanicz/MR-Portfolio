@@ -278,3 +278,50 @@
     align-items: center;
   }
 }
+.portfolio-container {
+  min-height: 100vh;
+  background-color: #121212;
+  color: #e0e0e0;
+  padding: 120px 32px 60px;
+}
+
+.lightbox {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: zoom-out;
+  z-index: 1500;
+}
+
+.lightbox-image {
+  max-width: 90%;
+  max-height: 90%;
+  box-shadow: 0 0 20px rgba(0,0,0,0.7);
+  border-radius: 12px;
+  cursor: auto;
+  user-select: none;
+}
+
+.lightbox-close {
+  position: fixed;
+  top: 20px;
+  right: 30px;
+  background: transparent;
+  border: none;
+  font-size: 48px;
+  color: white;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+  padding: 0;
+  line-height: 1;
+  z-index: 1600;
+  transition: color 0.2s ease;
+}
+
+.lightbox-close:hover {
+  color: #27AE60;
+}

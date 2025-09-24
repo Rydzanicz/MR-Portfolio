@@ -23,6 +23,7 @@ interface Project {
 })
 export class PortfolioComponent {
   activeProject = 'cinkciarz';
+  selectedImage: string | null = null;
 
   projects: Project[] = [
     {
@@ -92,5 +93,13 @@ export class PortfolioComponent {
 
   selectProject(projectId: string): void {
     this.activeProject = projectId;
+  }
+
+  openImage(imageUrl: string): void {
+    this.selectedImage = imageUrl;
+  }
+
+  closeImage(): void {
+    this.selectedImage = null;
   }
 }
