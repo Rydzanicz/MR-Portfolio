@@ -3,11 +3,13 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
+    "start": "serve -s dist/portfolio-app/browser",
+    "build:browser": "ng build --configuration production",
+    "build:server": "ng run portfolio-app:server:production",
+    "build:ssr": "npm run build:browser && npm run build:server",
+    "serve:ssr:portfolio-app": "node dist/portfolio-app/server/main.js",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test",
-    "serve:ssr:portfolio-app": "node dist/portfolio-app/server/server.mjs"
+    "test": "ng test"
   },
   "private": true,
   "dependencies": {
