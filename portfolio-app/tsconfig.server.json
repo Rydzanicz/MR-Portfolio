@@ -5,13 +5,11 @@
     "target": "es2020",
     "types": []
   },
-  "include": [
-    "src/main.server.ts",
-    "src/polyfills.ts",
-    "src/**/*.d.ts"
+  "files": [
+    "src/main.server.ts"
   ],
   "exclude": [
     "src/test.ts",
-    "src/**/*.spec.ts"
+    "**/*.spec.ts"
   ]
 }

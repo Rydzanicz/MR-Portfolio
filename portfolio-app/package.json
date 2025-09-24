@@ -3,11 +3,10 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "serve -s dist/portfolio-app/browser",
+    "start": "serve dist/portfolio-app/browser",
     "build:browser": "ng build --configuration production",
     "build:server": "ng run portfolio-app:server:production",
     "build:ssr": "npm run build:browser && npm run build:server",
-    "serve:ssr:portfolio-app": "node dist/portfolio-app/server/main.js",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
@@ -48,6 +47,7 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
+    "serve": "^14.2.5",
     "typescript": "~5.7.2"
   }
 }
