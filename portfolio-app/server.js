@@ -2,10 +2,10 @@ const express = require('express');
 const path = require('path');
 const app = express();
 
-app.use(express.static(path.join(__dirname, 'dist/my-angular-app/browser')));
+app.use(express.static(path.join(__dirname, 'dist/portfolio-app/browser')));
 
 app.get('/*', function (req, res) {
-  res.sendFile(path.join(__dirname, 'dist/my-angular-app/browser', 'index.html'));
+  res.sendFile(path.join(__dirname, 'dist/portfolio-app/browser', 'index.html'));
 });
 
 const PORT = process.env.PORT || 4200;
