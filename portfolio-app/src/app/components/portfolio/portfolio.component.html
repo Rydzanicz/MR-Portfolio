@@ -1,2 +1,81 @@
-<h2>Moje Portfolio</h2>
-<p>Tu wstaw projekty, zdjęcia, linki itp.</p>
+<div class="portfolio-container">
+  <div class="portfolio-header">
+    <h1 class="portfolio-title">Portfolio</h1>
+    <p class="portfolio-subtitle">Projekty i doświadczenie zawodowe</p>
+  </div>
+
+  <!-- Project Navigation -->
+  <div class="project-navigation">
+    <button
+      *ngFor="let project of projects"
+      [class.active]="activeProject === project.id"
+      (click)="selectProject(project.id)"
+      class="project-tab">
+      <div class="tab-content">
+        <span class="company">{{ project.company }}</span>
+        <span class="period">{{ project.period }}</span>
+      </div>
+    </button>
+  </div>
+
+  <!-- Active Project Content -->
+  <div class="project-content">
+    <div class="project-overview">
+      <div class="project-info">
+        <h2 class="project-title">{{ currentProject.title }}</h2>
+        <p class="project-description">{{ currentProject.description }}</p>
+
+        <div class="project-technologies">
+          <h3>Technologie</h3>
+          <div class="tech-tags">
+            <span *ngFor="let tech of currentProject.technologies" class="tech-tag">
+              {{ tech }}
+            </span>
+          </div>
+        </div>
+
+        <div class="project-link" *ngIf="currentProject.link">
+          <a [href]="currentProject.link" target="_blank" class="btn btn-primary">
+            <i class="fas fa-external-link-alt"></i>
+            Zobacz projekt
+          </a>
+        </div>
+      </div>
+
+      <div class="project-images">
+        <div class="image-grid">
+          <div *ngFor="let image of currentProject.images; let i = index"
+               class="image-container">
+            <img [src]="image" [alt]="currentProject.company + ' screenshot ' + (i+1)"
+                 class="project-image">
+            <div class="image-overlay">
+              <i class="fas fa-search-plus"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Features Section -->
+    <div class="project-features">
+      <h3>Kluczowe funkcjonalności</h3>
+      <div class="features-grid">
+        <div *ngFor="let feature of currentProject.features" class="feature-item">
+          <i class="fas fa-check-circle"></i>
+          <span>{{ feature }}</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Achievements Section -->
+    <div class="project-achievements">
+      <h3>Osiągnięcia</h3>
+      <div class="achievements-list">
+        <div *ngFor="let achievement of currentProject.achievements" class="achievement-item">
+          <i class="fas fa-trophy"></i>
+          <span>{{ achievement }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
