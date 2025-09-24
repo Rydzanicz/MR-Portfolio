@@ -1,0 +1,33 @@
+<div class="home-container">
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1>
+          <span class="greeting">Cześć, jestem</span>
+          <span class="name">Michał Rydzic</span>
+        </h1>
+        <h2 class="subtitle">Full-Stack Developer</h2>
+        <p class="description">
+          Tworzę nowoczesne aplikacje webowe z wykorzystaniem najnowszych technologii, w tym Angular i Java.
+        </p>
+        <div class="actions">
+          <a routerLink="/cv" class="btn btn-primary"><i class="fas fa-file"></i> Zobacz CV</a>
+          <a href="https://github.com/Rydzic" target="_blank" class="btn btn-outline"><i class="fab fa-github"></i> GitHub</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="assets/profil.jpg" alt="Michał Rydzic" class="profile-pic" />
+      </div>
+    </div>
+  </section>
+
+  <section class="tech-section">
+    <h2>Technologie</h2>
+    <div class="tech-grid">
+      <div *ngFor="let tech of technologies" class="tech-item">
+        <i [class]="tech.icon"></i>
+        <span>{{ tech.name }}</span>
+      </div>
+    </div>
+  </section>
+</div>
