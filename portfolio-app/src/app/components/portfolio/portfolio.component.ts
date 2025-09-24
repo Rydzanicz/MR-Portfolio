@@ -32,7 +32,7 @@ export class PortfolioComponent {
       period: '2021 - 2024',
       title: 'Platforma Bankowa i Pożyczkowa',
       description: 'Kompleksowa platforma finansowa oferująca usługi bankowe, pożyczki oraz wymianę walut. System obsługuje tysiące użytkowników dziennie.',
-      technologies: ['Java 19', 'Spring Boot', 'MySQL', 'Angular 18', 'REST API', 'Microservices', 'Docker', 'GCP'],
+      technologies: ['Java 19', 'Spring Boot', 'Angular 18', 'PostgreSQL', 'REST API', 'Microservices', 'Docker', 'GCP'],
       features: [
         'Automatyczne harmonogramy spłat',
         'System nadpłat i dystrybucji zobowiązań',
@@ -64,7 +64,7 @@ export class PortfolioComponent {
       period: '2025 - 2025',
       title: 'E-commerce i System Zarządzania',
       description: 'Nowoczesna platforma e-commerce z zaawansowanym systemem zarządzania produktami, zamówieniami i klientami.',
-      technologies: ['Java 21', 'Spring Boot 3', 'Angular 19', 'PostgreSQL', 'Docker', 'Kubernetes', 'GCP'],
+      technologies: ['Java 21', 'Spring Boot', 'Angular 19', 'PostgreSQL', 'REST API',  'Docker', 'GCP'],
       features: [
         'Katalog produktów z dostosowaniem indywidualnego tekstu',
         'Koszyk i proces checkout',

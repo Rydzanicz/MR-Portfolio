@@ -1,32 +1,179 @@
 <div class="home-container">
-  <section class="hero">
+  <section class="hero-section" id="hero">
     <div class="hero-content">
       <div class="hero-text">
-        <h1>
+        <div class="hero-badge">
+          <span class="status-dot"></span>
+          Dostępny do współpracy
+        </div>
+
+        <h1 class="hero-title">
           <span class="greeting">Cześć, jestem</span>
-          <span class="name">Michał Rydzic</span>
+          <span class="name">Michał Rydzanicz</span>
+          <span class="typed-text">{{ typedText }}<span class="cursor">|</span></span>
         </h1>
-        <h2 class="subtitle">Full-Stack Developer</h2>
-        <p class="description">
-          Tworzę nowoczesne aplikacje webowe z wykorzystaniem najnowszych technologii, w tym Angular i Java.
+
+        <p class="hero-description">
+          Specjalizuję się w tworzeniu nowoczesnych aplikacji webowych z wykorzystaniem
+          <strong>Java/Spring</strong> oraz <strong>Angular</strong>.
+          Ponad 3 lata doświadczenia w automatyzacji procesów biznesowych i optymalizacji systemów.
         </p>
-        <div class="actions">
-          <a routerLink="/cv" class="btn btn-primary"><i class="fas fa-file"></i> Zobacz CV</a>
-          <a href="https://github.com/Rydzic" target="_blank" class="btn btn-outline"><i class="fab fa-github"></i> GitHub</a>
+
+        <div class="hero-actions">
+          <a routerLink="/portfolio" class="btn btn-primary">
+            <i class="fas fa-briefcase"></i>
+            Zobacz moje projekty
+          </a>
+          <a routerLink="/cv" class="btn btn-outline">
+            <i class="fas fa-download"></i>
+            Pobierz CV
+          </a>
+          <a href="mailto:rydzanicz.mm@gmail.com" class="btn btn-ghost">
+            <i class="fas fa-envelope"></i>
+            Kontakt
+          </a>
+        </div>
+
+        <div class="social-links">
+          <a href="https://github.com/Rydzanicz" target="_blank" class="social-link">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://linkedin.com/in/michał-rydzanicz-97307827b" target="_blank" class="social-link">
+            <i class="fab fa-linkedin"></i>
+          </a>
         </div>
       </div>
-      <div class="hero-image">
-        <img src="assets/profil.jpg" alt="Michał Rydzic" class="profile-pic" />
+
+      <div class="hero-visual">
+        <div class="profile-card">
+          <div class="card-header">
+            <div class="card-dots">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </div>
+            <span class="card-title">developer.tsx</span>
+          </div>
+          <div class="card-content">
+            <img src="assets/profil.jpg" alt="Michał Rydzanicz" class="profile-image">
+            <div class="code-snippet">
+              <div class="code-line"><span class="keyword">const</span> developer = &#123;</div>
+              <div class="code-line">  name: <span class="string">"Michał Rydzanicz"</span>,</div>
+              <div class="code-line">  role: <span class="string">"Full-Stack Developer"</span>,</div>
+              <div class="code-line">  location: <span class="string">"Wrocław, PL"</span>,</div>
+              <div class="code-line">  experience: <span class="number">3</span>,</div>
+              <div class="code-line">&#125;;</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="stats-section">
+      <div class="stats-grid">
+        <div *ngFor="let stat of stats" class="stat-item">
+          <i [class]="stat.icon"></i>
+          <span class="stat-number">{{ stat.number }}</span>
+          <span class="stat-label">{{ stat.label }}</span>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="tech-section">
-    <h2>Technologie</h2>
-    <div class="tech-grid">
-      <div *ngFor="let tech of technologies" class="tech-item">
-        <i [class]="tech.icon"></i>
-        <span>{{ tech.name }}</span>
+  <section class="tech-section" id="technologies">
+    <div class="section-container">
+      <div class="section-header">
+        <h2 class="section-title">Technologie & Narzędzia</h2>
+        <p class="section-subtitle">Główne technologie, z którymi pracuję na co dzień</p>
+      </div>
+
+      <div class="tech-grid">
+        <div *ngFor="let tech of technologies" class="tech-item">
+          <div class="tech-icon" [style.color]="tech.color">
+            <i [class]="tech.icon"></i>
+          </div>
+          <div class="tech-info">
+            <h4>{{ tech.name }}</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="projects-section" id="projects">
+    <div class="section-container">
+      <div class="section-header">
+        <h2 class="section-title">Wybrane Projekty</h2>
+        <p class="section-subtitle">Najważniejsze projekty z mojego portfolio</p>
+      </div>
+
+      <div class="projects-grid">
+        <div *ngFor="let project of featuredProjects; let i = index" class="project-card" [attr.data-index]="i">
+          <div class="project-image">
+            <img [src]="project.image" [alt]="project.title">
+            <div class="project-overlay">
+              <a [routerLink]="project.link" class="project-link">
+                <i class="fas fa-external-link-alt"></i>
+              </a>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3>{{ project.title }}</h3>
+            <p>{{ project.description }}</p>
+            <div class="project-tech">
+              <span *ngFor="let tech of project.technologies" class="tech-badge">{{ tech }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="projects-cta">
+        <a routerLink="/portfolio" class="btn btn-primary">
+          Zobacz wszystkie projekty
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="services-section" id="services">
+    <div class="section-container">
+      <div class="section-header">
+        <h2 class="section-title">Moje Usługi</h2>
+        <p class="section-subtitle">W czym mogę Ci pomóc</p>
+      </div>
+
+      <div class="services-grid">
+        <div *ngFor="let service of services" class="service-card">
+          <div class="service-icon">
+            <i [class]="service.icon"></i>
+          </div>
+          <h3>{{ service.title }}</h3>
+          <p>{{ service.description }}</p>
+          <ul class="service-features">
+            <li *ngFor="let feature of service.features">
+              <i class="fas fa-check"></i>
+              {{ feature }}
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="cta-content">
+      <h2>Gotowy na współpracę?</h2>
+      <p>Skontaktuj się ze mną, aby omówić Twój projekt</p>
+      <div class="cta-actions">
+        <a href="mailto:rydzanicz.mm@gmail.com" class="btn btn-primary">
+          <i class="fas fa-envelope"></i>
+          Napisz do mnie
+        </a>
+        <a routerLink="/cv" class="btn btn-outline">
+          <i class="fas fa-user"></i>
+          Zobacz CV
+        </a>
       </div>
     </div>
   </section>
