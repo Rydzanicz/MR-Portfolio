@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 
-import { PdfGeneratorService } from './pdf-generator.service';
+import { PdfGeneratorService } from './pdf.service';
 
 describe('PdfGeneratorService', () => {
   let service: PdfGeneratorService;

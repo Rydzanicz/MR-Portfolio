@@ -1,7 +1,10 @@
-import { Component } from '@angular/core';
-import { TranslationService } from '../../services/translation.service';
+import {Component} from '@angular/core';
 import {RouterLink, RouterLinkActive} from "@angular/router";
 import {TranslatePipe} from "../../pipes/translate.pipe";
+import {TranslationService} from '../../services/TranslationService';
+import {BehaviorSubject} from 'rxjs';
+
+export type Language = 'pl' | 'en';
 
 @Component({
   selector: 'app-navigation',
@@ -14,12 +17,15 @@ import {TranslatePipe} from "../../pipes/translate.pipe";
   styleUrls: ['./navigation.component.scss']
 })
 export class NavigationComponent {
-  currentLang = 'pl';
+  private currentLanguage = new BehaviorSubject<Language>('pl');
+  currentLanguage$ = this.currentLanguage.asObservable();
 
-  constructor(private translationService: TranslationService) {}
+  constructor(private translationService: TranslationService) {
+  }
 
   switchLanguage(lang: string) {
-    this.currentLang = lang;
-    this.translationService.setLanguage(lang);
+    const newLang: Language = this.currentLanguage.value === 'pl' ? 'en' : 'pl';
+
+    this.translationService.setLanguage(newLang);
   }
 }

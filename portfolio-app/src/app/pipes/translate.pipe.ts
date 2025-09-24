@@ -1,15 +1,15 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { TranslationService } from '../services/translation.service';
+import {Translation, TranslationService} from '../services/TranslationService';
 
 @Pipe({
-    name: 'translate',
-    pure: false // aby aktualizowało przy zmianie języka
+  name: 'translate',
+  pure: false // lub true, zależnie od potrzeb
 })
 export class TranslatePipe implements PipeTransform {
+  constructor(private translationService: TranslationService) {}
 
-    constructor(private translationService: TranslationService) {}
+  transform(key: keyof Translation): string {
+    return this.translationService.getTranslationByKey(key);
+  }
 
-    transform(key: string): string {
-        return this.translationService.getTranslation(key);
-    }
 }
