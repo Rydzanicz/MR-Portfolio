@@ -20,7 +20,7 @@ export class ContactMailerService {
     return this.http;
   }
 
-  sendContactMessage(contactData: { name: string; email: string; message: string }): Observable<any> {
+  sendContactMessage(contactData: { name: string; addressEmail: string; message: string }): Observable<any> {
     const headers = new HttpHeaders({
       'Content-Type': 'application/json',
       'X-API-KEY': this.apiKey
