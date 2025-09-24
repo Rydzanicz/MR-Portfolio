@@ -1,0 +1,17 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./dist/out-tsc/server",
+    "target": "es2020",
+    "types": []
+  },
+  "include": [
+    "src/main.server.ts",
+    "src/polyfills.ts",
+    "src/**/*.d.ts"
+  ],
+  "exclude": [
+    "src/test.ts",
+    "src/**/*.spec.ts"
+  ]
+}
