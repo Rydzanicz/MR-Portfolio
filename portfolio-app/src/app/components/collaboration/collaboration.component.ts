@@ -17,7 +17,7 @@ export class CollaborationComponent implements OnInit {
 
   stats = [
     { number: '100zł', label: 'Koszty rozpoczęcia', icon: 'fas fa-coins' },
-    { number: '24/7', label: 'Wsparcie techniczne', icon: 'fas fa-headset' },
+    { number: '7/7', label: 'Wsparcie techniczne', icon: 'fas fa-headset' },
     { number: '100%', label: 'Zadowolonych klientek', icon: 'fas fa-heart' },
     { number: '∞', label: 'Możliwości rozwoju', icon: 'fas fa-rocket' }
   ];
