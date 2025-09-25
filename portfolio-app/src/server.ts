@@ -12,18 +12,6 @@ const indexHtml = join(browserDistFolder, 'index.html');
 const app = express();
 const commonEngine = new CommonEngine();
 
-/**
- * Przykładowe endpointy REST API (jeśli potrzebne)
- */
-/*
-app.get('/api/**', (req, res) => {
-  // Logika API
-});
-*/
-
-/**
- * Serwowanie statycznych plików z /browser
- */
 app.use(
   express.static(browserDistFolder, {
     maxAge: '1y',
@@ -31,9 +19,6 @@ app.use(
   }),
 );
 
-/**
- * Obsługa wszystkich pozostałych zapytań przez renderowanie Angular SSR
- */
 app.get('*', (req, res, next) => {
   const { protocol, originalUrl, baseUrl, headers } = req;
 
@@ -49,9 +34,7 @@ app.get('*', (req, res, next) => {
     .catch((err) => next(err));
 });
 
-/**
- * Uruchomienie serwera na porcie z environment lub 4000
- */
+
 if (isMainModule(import.meta.url)) {
   const port = process.env['PORT'] || 4000;
   app.listen(port, () => {

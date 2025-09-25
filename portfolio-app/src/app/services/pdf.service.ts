@@ -62,8 +62,6 @@ export class PdfService {
         resolve();
       }).catch(error => {
         reject(error);
-      }).finally(() => {
-        elementsToHide.forEach(el => el.style.display = '');
       });
     });
   }
