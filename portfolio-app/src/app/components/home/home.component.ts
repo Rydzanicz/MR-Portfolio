@@ -11,7 +11,6 @@ import {FooterComponent} from '../footer/footer.component';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  currentLanguage: 'pl' | 'en' = 'pl';
 
   typedText = '';
   fullText = 'Full-Stack Developer';
