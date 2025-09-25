@@ -6,7 +6,7 @@ interface Project {
   company: string;
   period: string;
   title: string;
-  description: string;
+  descriptionPoints: string[];
   technologies: string[];
   features: string[];
   images: string[];
@@ -31,7 +31,12 @@ export class PortfolioComponent {
       company: 'Cinkciarz.pl',
       period: '2021 - 2024',
       title: 'Platforma Bankowa i Pożyczkowa',
-      description: 'Kompleksowa platforma finansowa oferująca usługi bankowe, pożyczki oraz wymianę walut. System obsługuje tysiące użytkowników dziennie.',
+      descriptionPoints: [
+        'W projekcie zajmowałem się utrzymaniem kluczowego projektu firmy, czyli pożyczek. Polegało to na monitorowaniu GCP i raportowaniu błędów z logów dla kilku mikroserwisów jednocześnie.',
+        'Tworzyłem nowoczesny interfejs użytkownika dla pożyczek wielomiesięcznych.',
+        'Optymalizowałem backend oraz tworzyłem REST API do połączenia z nową funkcjonalnością we współpracy z zespołem mobilnym.',
+        'Optymalizowałem raporty dla księgowości.'
+      ],
       technologies: ['Java 19', 'Spring Boot', 'Angular 18', 'PostgreSQL', 'REST API', 'Microservices', 'Docker', 'GCP'],
       features: [
         'Automatyczne harmonogramy spłat',
@@ -44,9 +49,9 @@ export class PortfolioComponent {
         'Zarządzanie kontami użytkowników'
       ],
       images: [
-        'assets/cinkciarz/strona.jpg',
-        'assets/cinkciarz/loans.jpg',
-        'assets/cinkciarz/apk.jpg'
+        'assets/images/cinkciarz/strona.jpg',
+        'assets/images/cinkciarz/loans.jpg',
+        'assets/images/cinkciarz/apk.jpg'
       ],
       achievements: [
         'Wdrożono pożyczek wielomiesięcznych',
@@ -63,8 +68,13 @@ export class PortfolioComponent {
       company: 'GoldenTag.pl',
       period: '2025 - 2025',
       title: 'E-commerce i System Zarządzania',
-      description: 'Nowoczesna platforma e-commerce z zaawansowanym systemem zarządzania produktami, zamówieniami i klientami.',
-      technologies: ['Java 21', 'Spring Boot', 'Angular 19', 'PostgreSQL', 'REST API',  'Docker', 'GCP'],
+      descriptionPoints: [
+        'Stworzyłem nowoczesną platformę e-commerce z zaawansowanym systemem personalizacji produktów.',
+        'Zrealizowałem integracje z firmami kurierskimi, procesy checkout oraz system płatności online.',
+        'Zautomatyzowałem proces fakturowania oraz zarządzanie zamówieniami w panelu administratora.'
+      ],
+
+      technologies: ['Java 21', 'Spring Boot', 'Angular 19', 'PostgreSQL', 'REST API', 'Docker', 'GCP'],
       features: [
         'Katalog produktów z dostosowaniem indywidualnego tekstu',
         'Koszyk i proces checkout',
@@ -75,9 +85,9 @@ export class PortfolioComponent {
         'Integracja z kurierami'
       ],
       images: [
-        'assets/goldenTag/home.jpg',
-        'assets/goldenTag/shop.jpg',
-        'assets/goldenTag/mail.jpg',
+        'assets/images/goldenTag/home.jpg',
+        'assets/images/goldenTag/shop.jpg',
+        'assets/images/goldenTag/mail.jpg',
       ],
       achievements: [
         'Integracja z Inpost',
