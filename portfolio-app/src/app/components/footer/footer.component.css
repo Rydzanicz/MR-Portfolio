@@ -1,0 +1,41 @@
+
+.cta-section {
+  background: linear-gradient(135deg, #27AE60, #2ECC71);
+  padding: 100px 32px;
+  text-align: center;
+}
+
+.cta-content h2 {
+  font-size: 48px;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 16px;
+}
+
+.cta-content p {
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 40px;
+}
+
+.cta-actions {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.cta-section .btn-primary {
+  background: white;
+  color: #27AE60;
+}
+
+.cta-section .btn-outline {
+  border-color: white;
+  color: white;
+}
+
+.cta-section .btn-outline:hover {
+  background: white;
+  color: #27AE60;
+}

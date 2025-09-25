@@ -1,0 +1,244 @@
+<div class="home-container">
+  <section class="hero-section" id="hero">
+    <div class="hero-content">
+      <div class="hero-text">
+        <div class="hero-badge">
+          <span class="status-dot"></span>
+          Otwarta na współpracę
+        </div>
+
+        <h1 class="hero-title">
+          <span class="greeting">Mam pomysł na</span>
+          <span class="name">Współpracę</span>
+          <span class="typed-text">{{ typedText }}<span class="cursor">|</span></span>
+        </h1>
+
+        <p class="hero-description">
+          Tworzę sklepy internetowe dla <strong>rękodzielniczek</strong> z małych miejscowości.
+          <strong>Ty tworzysz</strong> piękne rzeczy, <strong>ja zajmuję się</strong> całą resztą -
+          stroną, klientami i sprzedażą.
+        </p>
+      </div>
+
+      <div class="hero-visual">
+        <img src="assets/dog.jpg" alt="Wioska rękodzielnicza" class="profile-image"/>
+      </div>
+
+    </div>
+
+    <div class="stats-section">
+      <div class="stats-grid">
+        <div *ngFor="let stat of stats" class="stat-item">
+          <i [class]="stat.icon"></i>
+          <span class="stat-number">{{ stat.number }}</span>
+          <span class="stat-label">{{ stat.label }}</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tech-section" id="story">
+    <div class="section-container">
+      <div class="section-header">
+        <h2 class="section-title">Moja Historia</h2>
+        <p class="section-subtitle">Skąd wziął się pomysł na tę współpracę</p>
+      </div>
+
+      <div class="story-content">
+        <div class="story-card">
+          <div class="story-icon">
+            <i class="fas fa-home"></i>
+          </div>
+          <div class="story-text">
+            <h3>Pochodzę z małej wioski</h3>
+            <p>
+              Jestem osobą pochodzącą z wioski, której kilka lat temu nie było na mapach Google.
+              Właśnie w takich wioskach można zobaczyć jak ludzie integrują się w świetlicach wiejskich
+              i tworzą własne rękodzieło.
+            </p>
+          </div>
+        </div>
+
+        <div class="story-card">
+          <div class="story-icon">
+            <i class="fas fa-heart"></i>
+          </div>
+          <div class="story-text">
+            <h3>Widzę potrzebę</h3>
+            <p>
+              Po jakimś czasie cały dom i rodzina jest ozdobiona takimi ozdobami
+              i wtedy kończy się pasja z tworzeniem czegoś własnoręcznie.
+              <strong>Tu przychodzę ja</strong> - pomagam przekształcić hobby w biznes.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="services-section" id="offer">
+    <div class="section-container">
+      <div class="section-header">
+        <h2 class="section-title">Co Oferuję</h2>
+        <p class="section-subtitle">Kompleksowa obsługa Twojego sklepu internetowego</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-laptop-code"></i>
+          </div>
+          <h3>Stworzenie strony</h3>
+          <p>Profesjonalna strona sklepu dostosowana do Twojego rękodzieła</p>
+          <ul class="service-features">
+            <li><i class="fas fa-check"></i>Nowoczesny design</li>
+            <li><i class="fas fa-check"></i>System płatności</li>
+            <li><i class="fas fa-check"></i>Panel administracyjny</li>
+            <li><i class="fas fa-check"></i>Responsywność</li>
+          </ul>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-tools"></i>
+          </div>
+          <h3>Utrzymanie techniczne</h3>
+          <p>Zajmuję się utrzymaniem i aktualizacjami strony</p>
+          <ul class="service-features">
+            <li><i class="fas fa-check"></i>Aktualizacje systemu</li>
+            <li><i class="fas fa-check"></i>Kopie zapasowe</li>
+            <li><i class="fas fa-check"></i>Monitoring bezpieczeństwa</li>
+            <li><i class="fas fa-check"></i>Wsparcie techniczne</li>
+          </ul>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-headset"></i>
+          </div>
+          <h3>Kontakt z klientem</h3>
+          <p>Obsługa zapytań i komunikacja z kupującymi</p>
+          <ul class="service-features">
+            <li><i class="fas fa-check"></i>Chat na stronie</li>
+            <li><i class="fas fa-check"></i>Obsługa maili</li>
+            <li><i class="fas fa-check"></i>Zarządzanie zwrotami</li>
+            <li><i class="fas fa-check"></i>Wsparcie klientów</li>
+          </ul>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <h3>Marketing & SEO</h3>
+          <p>Pozycjonowanie strony aby Twoje produkty były widoczne</p>
+          <ul class="service-features">
+            <li><i class="fas fa-check"></i>Optymalizacja SEO</li>
+            <li><i class="fas fa-check"></i>Google Ads</li>
+            <li><i class="fas fa-check"></i>Social Media</li>
+            <li><i class="fas fa-check"></i>Analityka</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="projects-section" id="process">
+    <div class="section-container">
+      <div class="section-header">
+        <h2 class="section-title">Jak to działa</h2>
+        <p class="section-subtitle">Prosty proces współpracy w 3 krokach</p>
+      </div>
+
+      <div class="projects-grid">
+        <div class="project-card">
+          <div class="process-number">1</div>
+          <div class="project-content">
+            <h3>Ty tworzysz</h3>
+            <p>Tobie zostaje tylko tworzenie pięknego rękodzieła. Skoncentruj się na tym, co lubisz najbardziej.</p>
+            <div class="project-tech">
+              <span class="tech-badge">Twoja pasja</span>
+              <span class="tech-badge">Rękodzieło</span>
+              <span class="tech-badge">Kreatywność</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="process-number">2</div>
+          <div class="project-content">
+            <h3>Automatyczne zamówienia</h3>
+            <p>Mail z adresem wysyłki przyjdzie automatycznie gdy ktoś kupi. System załatwia wszystko za Ciebie.</p>
+            <div class="project-tech">
+              <span class="tech-badge">Email</span>
+              <span class="tech-badge">Automatyzacja</span>
+              <span class="tech-badge">Powiadomienia</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="process-number">3</div>
+          <div class="project-content">
+            <h3>Wysyłasz produkt</h3>
+            <p>Pakujesz i wysyłasz na podany adres. Proste, szybkie i bez zbędnych komplikacji.</p>
+            <div class="project-tech">
+              <span class="tech-badge">Pakowanie</span>
+              <span class="tech-badge">Wysyłka</span>
+              <span class="tech-badge">Zadowolony klient</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tech-section" id="legal">
+    <div class="section-container">
+      <div class="section-header">
+        <h2 class="section-title">Aspekty Prawne</h2>
+        <p class="section-subtitle">Wszystko zgodnie z prawem, bez stresu</p>
+      </div>
+
+      <div class="legal-content">
+        <div class="legal-card">
+          <div class="legal-icon">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <div class="legal-text">
+            <h3>Działalność nierejestrowana</h3>
+            <p>
+              Dzięki zasadom działalności nierejestrowanej możesz tworzyć własne produkty bez obaw.
+              Gdy zarobki zbliżą się do granicy tych zasad, podpowiem jak założyć działalność
+              i polecę dobrych księgowych.
+            </p>
+            <p>
+              Więcej informacji znajdziesz na stronie
+              <a href="https://zielonalinia.gov.pl/-/dzialalnosc-nierejestrowa-co-warto-wiedzie-2" target="_blank"
+                 rel="noopener noreferrer">
+                Zielona Linia - Działalność nierejestrowana
+              </a>
+            </p>
+            <div class="legal-features">
+              <div class="legal-feature">
+                <i class="fas fa-check-circle"></i>
+                <span>Brak formalności na początku</span>
+              </div>
+              <div class="legal-feature">
+                <i class="fas fa-check-circle"></i>
+                <span>Pomoc w założeniu działalności</span>
+              </div>
+              <div class="legal-feature">
+                <i class="fas fa-check-circle"></i>
+                <span>Polecenie księgowych</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <app-footer></app-footer>
+</div>

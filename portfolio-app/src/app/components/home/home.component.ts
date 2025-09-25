@@ -1,11 +1,12 @@
 import {Component, OnInit} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {RouterModule} from '@angular/router';
+import {FooterComponent} from '../footer/footer.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, FooterComponent],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
@@ -17,10 +18,10 @@ export class HomeComponent implements OnInit {
   currentIndex = 0;
 
   stats = [
-    {number: '3+', label: 'Lata doświadczenia komercyjnego', icon: 'fas fa-briefcase'},
-    {number: '1+', label: 'Lata doświadczenia freelance', icon: 'fas fa-user-tie'}
+    { number: '3+', label: 'Lata doświadczenia komercyjnego', icon: 'fas fa-briefcase' },
+    { number: '1+', label: 'Lata doświadczenia freelance', icon: 'fas fa-user-tie' },
+    { number: '1+', label: 'Lata doświadczenia utrzymania własnego sklepu', icon: 'fas fa-store' }
   ];
-
 
   technologies = [
     {name: 'Java', icon: 'fab fa-java', color: '#f89820'},

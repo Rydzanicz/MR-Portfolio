@@ -129,7 +129,8 @@ export class TranslationService {
       ],
       projectsList: [
         'Rozwój narzędzi automatyzujących procesy biznesowe (Java, Spring, Angular)',
-        'Projekty dostępne na GitHub: github.com/Rydzanicz'
+        'Projekty dostępne na GitHub: github.com/Rydzanicz',
+        'Portfolio: viggoprogramer.pl'
       ]
     },
     en: {
@@ -216,7 +217,8 @@ export class TranslationService {
       ],
       projectsList: [
         'Development of business process automation tools (Java, Spring, Angular)',
-        'Projects available on GitHub: github.com/Rydzanicz'
+        'Projects available on GitHub: github.com/Rydzanicz',
+        'Portfolio: viggoprogramer.pl'
       ]
     }
   };
