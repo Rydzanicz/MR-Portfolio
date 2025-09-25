@@ -3,7 +3,6 @@ import {BrowserModule} from '@angular/platform-browser';
 import {HttpClientModule} from '@angular/common/http';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {AppRoutingModule} from "./app.routes";
-import {TranslatePipe} from "./pipes/translate.pipe";
 import {CvComponent} from "./components/cv/cv.component";
 
 @NgModule({
@@ -14,7 +13,6 @@ import {CvComponent} from "./components/cv/cv.component";
     CvComponent,
     HttpClientModule,
     FormsModule,
-    TranslatePipe,
     ReactiveFormsModule
   ],
   providers: [],
