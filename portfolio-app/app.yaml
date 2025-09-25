@@ -8,5 +8,9 @@ automatic_scaling:
   min_instances: 0
 
 handlers:
+  - url: /(.*\..*)
+    static_files: dist/portfolio-app/browser/\1
+    upload: dist/portfolio-app/browser/(.*\..*)
   - url: /.*
-    script: auto
+    static_files: dist/portfolio-app/browser/index.html
+    upload: dist/portfolio-app/browser/index.html
