@@ -21,8 +21,9 @@
     <div class="project-overview">
       <div class="project-info">
         <h2 class="project-title">{{ currentProject.title }}</h2>
-        <p class="project-description">{{ currentProject.description }}</p>
-
+        <ul class="project-description">
+          <li *ngFor="let point of currentProject.descriptionPoints">{{ point }}</li>
+        </ul>
         <div class="project-technologies">
           <h3>Technologie</h3>
           <div class="tech-tags">
