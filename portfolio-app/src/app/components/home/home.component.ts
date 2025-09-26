@@ -38,14 +38,14 @@ export class HomeComponent implements OnInit {
       title: 'Platforma Bankowa Cinkciarz.pl',
       description: 'System bankowy z automatyzacją procesów spłat i komunikacją z BIK',
       technologies: ['Java', 'Spring', 'PostgreSQL', 'Angular'],
-      image: 'assets/cinkciarz/strona.jpg',
+      image: 'assets/images/cinkciarz/strona.jpg',
       link: '/portfolio'
     },
     {
       title: 'E-commerce GoldenTag.pl',
       description: 'Nowoczesna platforma e-commerce z procesem checkout i fakturowaniem',
       technologies: ['Java', 'Spring', 'PostgreSQL', 'Angular'],
-      image: 'assets/goldenTag/home.jpg',
+      image: 'assets/images/goldenTag/home.jpg',
       link: '/portfolio'
     }
   ];

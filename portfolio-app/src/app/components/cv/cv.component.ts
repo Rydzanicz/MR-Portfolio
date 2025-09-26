@@ -1,7 +1,7 @@
-import { Component, ElementRef, ViewChild, OnDestroy } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { Subscription } from 'rxjs';
-import { PdfService } from '../../services/pdf.service';
+import {Component, ElementRef, ViewChild, OnDestroy} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {Subscription} from 'rxjs';
+import {PdfService} from '../../services/pdf.service';
 import {NotificationService} from '../../services/NotificationService';
 import {Language, Translation, TranslationService} from '../../services/TranslationService';
 
@@ -13,12 +13,13 @@ import {Language, Translation, TranslationService} from '../../services/Translat
   styleUrls: ['./cv.component.scss']
 })
 export class CvComponent implements OnDestroy {
-  @ViewChild('cvContent', { static: true }) cvContent!: ElementRef;
+  @ViewChild('cvContent', {static: true}) cvContent!: ElementRef;
 
   isGeneratingPdf = false;
   currentLanguage: Language = 'pl';
   translation: Translation;
   private subscription: Subscription;
+  isMobile: boolean = false;
 
   constructor(
     private notificationService: NotificationService,
@@ -32,6 +33,12 @@ export class CvComponent implements OnDestroy {
         this.translation = this.translationService.getTranslation();
       }
     );
+    this.checkScreenSize();
+    window.addEventListener('resize', () => this.checkScreenSize());
+  }
+
+  checkScreenSize(): void {
+    this.isMobile = window.innerWidth <= 768;
   }
 
   ngOnDestroy(): void {
