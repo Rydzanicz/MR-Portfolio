@@ -6,6 +6,17 @@ body {
   font-family: "FKGroteskNeue", "Geist", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
+.mobile-message {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #e0e0e0;
+  font-size: 1.5rem;
+  padding: 20px;
+  text-align: center;
+  background-color: #121212;
+}
 
 :host {
   display: block;
@@ -54,7 +65,7 @@ body {
   margin: 0 auto;
   align-items: center;
   background: linear-gradient(135deg, #27AE60, #2ECC71);
-  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   transition: transform 0.15s ease-out;
 }
 
@@ -73,7 +84,6 @@ body {
   font-size: 48px;
   color: white;
 }
-
 
 
 .skill-item {
@@ -283,6 +293,7 @@ body {
   background: linear-gradient(135deg, #27AE60, #2ECC71);
   color: white;
 }
+
 .download-section {
   margin-top: 32px;
   padding-top: 20px;

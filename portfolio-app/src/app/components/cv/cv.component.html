@@ -1,4 +1,8 @@
-<div class="cv-container" #cvContent id="cv-content">
+<div *ngIf="isMobile" class="mobile-message">
+  <p>Przepraszamy, ale pobieranie CV jest dostępne tylko na komputerze.</p>
+</div>
+
+<div *ngIf="!isMobile" class="cv-container" #cvContent id="cv-content">
   <div class="left-column">
     <div class="profile-photo">
       <div class="avatar">
