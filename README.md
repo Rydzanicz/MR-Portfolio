@@ -16,6 +16,7 @@ MR-Portfolio is a modern contact website designed to facilitate HR and collabora
 The project is built using:  
 - Angular  
 - Communication via REST API  
+- Hosting on Google Cloud
 
 ## How to Use
 
@@ -23,7 +24,7 @@ To view the portfolio and download the CV, simply visit the project website. To 
 
 ```bash
 git clone https://github.com/Rydzanicz/MR-Portfolio.git
-cd MR-Portfolio
+cd .\portfolio-app\
 npm install
 ng serve
 ```
