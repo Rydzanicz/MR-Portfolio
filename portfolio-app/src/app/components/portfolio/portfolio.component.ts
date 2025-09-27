@@ -57,7 +57,6 @@ export class PortfolioComponent {
         'Wdrożono pożyczek wielomiesięcznych',
         'Wdrożono automatyzację procesów spłat z poczekalni pożyczki',
         'Stworzenie mechanizmów generowania automatycznych harmonogramów',
-        'Stworzenie komunikacji z BIK',
         'Zoptymalizowano projekt do współpracy z zespołem mobilnym',
         'Obsługa ponad 10,000 aktywnych użytkowników'
       ],
@@ -91,7 +90,8 @@ export class PortfolioComponent {
       ],
       achievements: [
         'Integracja z Inpost',
-        'Integracja z płatnościmi online'
+        'Integracja z płatnościmi online',
+        "Automatyzacja maili i fakturowania"
       ],
       link: 'https://goldentag.pl'
     }
