@@ -8,7 +8,7 @@ import {FooterComponent} from '../footer/footer.component';
   standalone: true,
   imports: [CommonModule, RouterModule, FooterComponent],
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
 

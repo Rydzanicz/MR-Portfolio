@@ -16,7 +16,7 @@ export class CollaborationComponent implements OnInit {
   currentIndex = 0;
 
   stats = [
-    { number: '100zł', label: 'Koszty rozpoczęcia', icon: 'fas fa-coins' },
+    { number: '200zł', label: 'Koszty rozpoczęcia', icon: 'fas fa-coins' },
     { number: '7/7', label: 'Wsparcie techniczne', icon: 'fas fa-envelope' },
     { number: '100%', label: 'Zadowolonych klientek', icon: 'fas fa-heart' },
     { number: '∞', label: 'Możliwości rozwoju', icon: 'fas fa-rocket' }

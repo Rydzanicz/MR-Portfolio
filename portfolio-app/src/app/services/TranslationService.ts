@@ -1,5 +1,5 @@
-import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import {Injectable} from '@angular/core';
+import {BehaviorSubject} from 'rxjs';
 
 export type Language = 'pl' | 'en';
 
@@ -80,12 +80,12 @@ export class TranslationService {
         'Umiejętność korzystania z AI w codziennej pracy'
       ],
       languagesList: [
-        { name: 'Polski', level: 'Ojczysty' },
-        { name: 'Angielski', level: 'B1 / B2' }
+        {name: 'Polski', level: 'Ojczysty'},
+        {name: 'Angielski', level: 'B1 / B2'}
       ],
       additionalList: [
-        { icon: 'fas fa-car', text: 'Prawo jazdy kat. A i B' },
-        { icon: 'fas fa-map-marked-alt', text: 'Gotowość do relokacji' }
+        {icon: 'fas fa-car', text: 'Prawo jazdy kat. A i B'},
+        {icon: 'fas fa-map-marked-alt', text: 'Gotowość do relokacji'}
       ],
       experienceList: [
         {
@@ -168,12 +168,12 @@ export class TranslationService {
         'Ability to use AI in daily work'
       ],
       languagesList: [
-        { name: 'Polish', level: 'Native' },
-        { name: 'English', level: 'B1 / B2' }
+        {name: 'Polish', level: 'Native'},
+        {name: 'English', level: 'B1 / B2'}
       ],
       additionalList: [
-        { icon: 'fas fa-car', text: 'Driving license cat. A and B' },
-        { icon: 'fas fa-map-marked-alt', text: 'Willingness to relocate' }
+        {icon: 'fas fa-car', text: 'Driving license cat. A and B'},
+        {icon: 'fas fa-map-marked-alt', text: 'Willingness to relocate'}
       ],
       experienceList: [
         {
@@ -223,10 +223,7 @@ export class TranslationService {
     }
   };
 
-  constructor() {}
-
-  getCurrentLanguage(): Language {
-    return this.currentLanguage.value;
+  constructor() {
   }
 
   setLanguage(lang: Language): void {
@@ -235,11 +232,6 @@ export class TranslationService {
 
   getTranslation(): Translation {
     return this.translations[this.currentLanguage.value];
-  }
-
-  getTranslationByKey(key: keyof Translation): string {
-    const value = this.translations[this.currentLanguage.value][key];
-    return typeof value === 'string' ? value : '';
   }
 
   toggleLanguage(): void {
