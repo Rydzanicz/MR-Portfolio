@@ -30,7 +30,7 @@ export class HomeComponent implements OnInit {
     {name: 'PostgreSQL', icon: 'fas fa-database', color: '#4479a1'},
     {name: 'Docker', icon: 'fab fa-docker', color: '#2496ed'},
     {name: 'Google Cloud', icon: 'fab fa-google', color: '#4285f4'},
-    {name: 'Git', icon: 'fab fa-git-alt', color: '#f05032'}
+    {name: 'Github', icon: 'fab fa-github', color: '#ffffff'}
   ];
 
   featuredProjects = [
