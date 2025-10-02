@@ -13,7 +13,7 @@ import {Language, Translation, TranslationService} from '../../services/Translat
   styleUrls: ['./cv.component.scss']
 })
 export class CvComponent implements OnDestroy {
-  @ViewChild('cvContent', {static: true}) cvContent!: ElementRef;
+  @ViewChild('cvContent') cvContent?: ElementRef;
 
   isGeneratingPdf = false;
   currentLanguage: Language = 'pl';
@@ -35,6 +35,12 @@ export class CvComponent implements OnDestroy {
     );
     this.checkScreenSize();
     window.addEventListener('resize', () => this.checkScreenSize());
+    const savedLanguage = window.localStorage.getItem('selectedLanguage');
+    if (savedLanguage) {
+      this.currentLanguage = savedLanguage as Language;
+      this.translationService.setLanguage(this.currentLanguage);
+      this.translation = this.translationService.getTranslation();
+    }
   }
 
   checkScreenSize(): void {
@@ -53,6 +59,9 @@ export class CvComponent implements OnDestroy {
     this.isGeneratingPdf = true;
 
     try {
+      if (!this.cvContent?.nativeElement) {
+        throw new Error('Brak referencji do elementu cvContent!');
+      }
       const filename = this.currentLanguage === 'pl'
         ? 'Michal_Rydzanicz_CV_PL.pdf'
         : 'Michal_Rydzanicz_CV_EN.pdf';
@@ -64,6 +73,8 @@ export class CvComponent implements OnDestroy {
       this.notificationService.showNotification(this.translation.pdfError, 'error');
     } finally {
       this.isGeneratingPdf = false;
+      window.localStorage.setItem('selectedLanguage', this.currentLanguage);
+      window.location.reload();
     }
   }
 
