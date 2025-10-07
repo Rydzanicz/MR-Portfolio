@@ -24,6 +24,7 @@ interface Project {
 export class PortfolioComponent {
   activeProject = 'goldentag';
   selectedImage: string | null = null;
+  hoveredSegment: number | null = null;
 
   projects: Project[] = [
     {
@@ -94,6 +95,36 @@ export class PortfolioComponent {
         "Automatyzacja maili i fakturowania"
       ],
       link: 'https://goldentag.pl'
+    },
+    {
+      id: 'WWart',
+      company: 'WWart.store',
+      period: '2025 - 2025',
+      title: 'E-commerce i System wysłaniam mail z eBookiem',
+      descriptionPoints: [
+        'Stworzyłem nowoczesną platformę e-commerce z zaawansowanym systemem wysyłki maili z fakturą oraz z eBookiem.',
+        'Zrealizowałem integracje z firmami kurierskimi, procesy checkout oraz system płatności online.'
+      ],
+
+      technologies: ['Java 21', 'Spring Boot', 'Angular 19', 'PostgreSQL', 'REST API', 'Docker', 'GCP'],
+      features: [
+        'Katalog produktów ',
+        'Koszyk i proces checkout',
+        'System płatności online',
+        'Automatyzacja procesu faktur',
+        'Analytics i raporty sprzedaży',
+        'Integracja z kurierami'
+      ],
+      images: [
+        'assets/images/WWart/home.jpg',
+        'assets/images/WWart/shop.jpg',
+        'assets/images/WWart/mail.jpg',
+      ],
+      achievements: [
+        'Integracja z Inpost',
+        'Integracja z płatnościmi online',
+        "Automatyzacja maili i fakturowania i Ebookami"
+      ]
     }
   ];
 
