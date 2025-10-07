@@ -4,7 +4,8 @@
   "scripts": {
     "ng": "ng",
     "start": "node server.js",
-    "build": "ng build --configuration production",
+    "build": "ng build --configuration production && npm run copy-sitemap",
+    "copy-sitemap": "powershell Copy-Item -Path sitemap.xml -Destination dist/portfolio-app/browser/sitemap.xml",
     "watch": "ng build --watch --configuration development",
     "gcp-build": "ng build --configuration production",
     "test": "ng test",
