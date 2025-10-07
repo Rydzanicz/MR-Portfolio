@@ -4,17 +4,84 @@
     <p class="portfolio-subtitle">Projekty i doświadczenie zawodowe</p>
   </div>
 
-  <div class="project-navigation">
-    <button
-      *ngFor="let project of projects"
-      [class.active]="activeProject === project.id"
-      (click)="selectProject(project.id)"
-      class="project-tab">
-      <div class="tab-content">
-        <span class="company">{{ project.company }}</span>
-        <span class="period">{{ project.period }}</span>
-      </div>
-    </button>
+  <div class="project-navigation segmented-circle">
+    <svg viewBox="0 0 400 400" width="600" height="600">
+      <defs>
+        <pattern id="img-project1" patternUnits="userSpaceOnUse" width="200" height="200">
+          <image href="assets/images/cinkciarz/logo.jpg" x="-70" y="-30" width="300" height="300"/>
+        </pattern>
+
+        <pattern id="img-project2" patternUnits="userSpaceOnUse" width="400" height="400">
+          <image href="assets/images/goldenTag/logo.jpg" x="130" y="130" width="300" height="300"/>
+        </pattern>
+        <pattern id="img-project3" patternUnits="userSpaceOnUse" width="400" height="400">
+          <image href="assets/images/WWart/logo.jpg" x="-30" y="120" width="300" height="350"/>
+        </pattern>
+
+      </defs>
+
+      <!-- Segment 1 (góra) -->
+      <g>
+        <path
+          d="M200,200 L200,60 A140,140 0 0,1 340,200 L300,200 A100,100 0 0,0 200,100 Z"
+          fill="#27AE60" stroke="#111" stroke-width="8"
+          class="segment-base"
+          [ngClass]="{'segment-hidden': hoveredSegment === 1}"
+        />
+        <path
+          [attr.d]="hoveredSegment === 1 ?
+          'M200,200 L200,30 A170,170 0 0,1 370,200 L280,200 A80,80 0 0,0 200,120 Z' :
+          'M200,200 L200,60 A140,140 0 0,1 340,200 L300,200 A100,100 0 0,0 200,100 Z'"
+          fill="url(#img-project1)" stroke="#111" stroke-width="8"
+          class="segment-image"
+          [ngClass]="{'segment-expanded': hoveredSegment === 1}"
+          (mouseenter)="hoveredSegment = 1" (mouseleave)="hoveredSegment = null"
+          (click)="selectProject(projects[0].id)" cursor="pointer"
+        />
+      </g>
+
+      <!-- Segment 2 (prawa) -->
+      <g>
+        <path
+          d="M200,200 L340,200 A140,140 0 0,1 200,340 L200,300 A100,100 0 0,0 300,200 Z"
+          fill="#27AE60" stroke="#111" stroke-width="8"
+          class="segment-base"
+          [ngClass]="{'segment-hidden': hoveredSegment === 2}"
+        />
+        <path
+          [attr.d]="hoveredSegment === 2 ?
+          'M200,200 L370,200 A170,170 0 0,1 200,370 L200,280 A80,80 0 0,0 280,200 Z' :
+          'M200,200 L340,200 A140,140 0 0,1 200,340 L200,300 A100,100 0 0,0 300,200 Z'"
+          fill="url(#img-project2)" stroke="#111" stroke-width="8"
+          class="segment-image"
+          [ngClass]="{'segment-expanded': hoveredSegment === 2}"
+          (mouseenter)="hoveredSegment = 2" (mouseleave)="hoveredSegment = null"
+          (click)="selectProject(projects[1].id)" cursor="pointer"
+        />
+      </g>
+
+      <!-- Segment 3 (dół) -->
+      <g>
+        <path
+          d="M200,200 L200,340 A140,140 0 0,1 60,200 L100,200 A100,100 0 0,0 200,300 Z"
+          fill="#27AE60" stroke="#111" stroke-width="8"
+          class="segment-base"
+          [ngClass]="{'segment-hidden': hoveredSegment === 3}"
+        />
+        <path
+          [attr.d]="hoveredSegment === 3 ?
+          'M200,200 L200,370 A170,170 0 0,1 30,200 L120,200 A80,80 0 0,0 200,280 Z' :
+          'M200,200 L200,340 A140,140 0 0,1 60,200 L100,200 A100,100 0 0,0 200,300 Z'"
+          fill="url(#img-project3)" stroke="#111" stroke-width="8"
+          class="segment-image"
+          [ngClass]="{'segment-expanded': hoveredSegment === 3}"
+          (mouseenter)="hoveredSegment = 3" (mouseleave)="hoveredSegment = null"
+          (click)="selectProject(projects[2].id)" cursor="pointer"
+        />
+      </g>
+
+      <circle cx="200" cy="200" r="85" fill="#121212"/>
+    </svg>
   </div>
 
   <div class="project-content">
