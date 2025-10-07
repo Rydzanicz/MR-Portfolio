@@ -11,6 +11,8 @@ handlers:
   - url: /sitemap.xml
     static_files: dist/portfolio-app/browser/sitemap.xml
     upload: dist/portfolio-app/browser/sitemap.xml
+  - url: /assets/images
+    static_dir: dist/portfolio-app/browser/assets/images
   - url: /(.*\..*)
     static_files: dist/portfolio-app/browser/\1
     upload: dist/portfolio-app/browser/(.*\..*)
