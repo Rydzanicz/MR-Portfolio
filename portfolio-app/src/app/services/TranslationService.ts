@@ -89,7 +89,7 @@ export class TranslationService {
       ],
       experienceList: [
         {
-          company: 'Fullstack',
+          company: 'Viggo Programer',
           period: 'styczeń 2025 – obecnie',
           title: 'Full-Stack Developer',
           location: 'Wrocław',
@@ -177,7 +177,7 @@ export class TranslationService {
       ],
       experienceList: [
         {
-          company: 'Fullstack',
+          company: 'Viggo Programer',
           period: 'January 2025 – present',
           title: 'Full-Stack Developer',
           location: 'Wrocław',
