@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, HostListener} from '@angular/core';
 import {CommonModule} from '@angular/common';
 
 interface Project {
@@ -142,5 +142,18 @@ export class PortfolioComponent {
 
   closeImage(): void {
     this.selectedImage = null;
+  }
+
+  isMobile(): boolean {
+    return window.innerWidth <= 768;
+  }
+  isDesktop(): boolean {
+    return !this.isMobile();
+  }
+  @HostListener('window:resize')
+  onResize() {
+    if (this.isDesktop()) {
+      this.hoveredSegment = null;
+    }
   }
 }
