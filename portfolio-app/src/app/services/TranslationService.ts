@@ -74,7 +74,6 @@ export class TranslationService {
         'Git',
         'Junit, Mockito, Cucumber',
         'Scram, JIRA',
-        'Clean code, DDD, DRY',
         'Umiejętność szybkiego uczenia się w nowych technologiach',
         'Praca zespołowa i komunikacja w zespole',
         'Umiejętność korzystania z AI w codziennej pracy'
@@ -85,7 +84,15 @@ export class TranslationService {
       ],
       additionalList: [
         {icon: 'fas fa-car', text: 'Prawo jazdy kat. A i B'},
-        {icon: 'fas fa-map-marked-alt', text: 'Gotowość do relokacji'}
+        {icon: 'fas fa-map-marked-alt', text: 'Gotowość do relokacji'},
+        {icon: 'fas fa-network-wired', text: 'Doświadczenie w diagnozowaniu problemów integracji'},
+        {icon: 'fas fa-database', text: 'Analiza danych i raportowanie dla audytu'},
+        {
+          icon: 'fas fa-handshake',
+          text: 'Komunikacja z zespołem technicznym integrującym się z naszym serwisem oraz codzienna komunikacja z osobami z biznesu'
+        },
+        {icon: 'fas fa-file-alt', text: 'Dokumentacja techniczna'},
+        {icon: 'fas fa-clock', text: 'Umiejętność pracy pod presją czasu'}
       ],
       experienceList: [
         {
@@ -119,11 +126,12 @@ export class TranslationService {
         {
           institution: 'Uniwersytet Zielonogórski',
           year: '2023',
-          degree: 'Dyplom ukończenia studiów technicznych',
+          degree: 'Dyplom Studiów Technicznych',
           details: [
-            'Przewodniczący koła naukowego (organizacja dni otwartych, warsztatów, wydarzeń technologicznych)',
-            'Rozwijanie umiejętności w Java, Kotlin, Spring, SQL, Angular',
-            'Aktywna praca w zespołach projektowych, metodyki Agile/Scrum'
+            'Kierunek: Informatyka / Inżynieria Oprogramowania',
+            'Przewodniczący koła naukowego – organizacja dni otwartych i warsztatów technologicznych',
+            'Prowadzenie korepetycji z programowania i IT',
+            'Aktywna praca w zespołach projektowych, metodyki Scrum'
           ]
         }
       ],
@@ -172,8 +180,16 @@ export class TranslationService {
         {name: 'English', level: 'B1 / B2'}
       ],
       additionalList: [
-        {icon: 'fas fa-car', text: 'Driving license cat. A and B'},
-        {icon: 'fas fa-map-marked-alt', text: 'Willingness to relocate'}
+        {icon: 'fas fa-car', text: 'Driving license category A and B'},
+        {icon: 'fas fa-map-marked-alt', text: 'Willingness to relocate'},
+        {icon: 'fas fa-network-wired', text: 'Experience in diagnosing integration issues'},
+        {icon: 'fas fa-database', text: 'Data analysis and audit reporting'},
+        {
+          icon: 'fas fa-handshake',
+          text: 'Communication with the technical team integrating with our service and daily communication with business stakeholders'
+        },
+        {icon: 'fas fa-file-alt', text: 'Technical documentation'},
+        {icon: 'fas fa-clock', text: 'Ability to work under time pressure'}
       ],
       experienceList: [
         {
@@ -207,11 +223,12 @@ export class TranslationService {
         {
           institution: 'University of Zielona Góra',
           year: '2023',
-          degree: 'Technical Studies Completion Diploma',
+          degree: 'Technical Studies Diploma',
           details: [
-            'Chairman of the scientific club (organizing open days, workshops, technological events)',
-            'Developing skills in Java, Kotlin, Spring, SQL, Angular',
-            'Active work in project teams, Agile/Scrum methodologies'
+            'Field of study: Computer Science / Software Engineering',
+            'Chair of scientific club – organization of open days and technology workshops',
+            'Conducting programming and IT tutoring',
+            'Active participation in project teams, Scrum methodologies'
           ]
         }
       ],
