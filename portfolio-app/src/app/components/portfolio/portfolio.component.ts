@@ -85,8 +85,8 @@ export class PortfolioComponent {
         'Integracja z kurierami'
       ],
       images: [
-        'assets/images/goldenTag/home.jpg',
-        'assets/images/goldenTag/shop.jpg',
+        'assets/images/goldenTag/home.png',
+        'assets/images/goldenTag/shop.png',
         'assets/images/goldenTag/mail.jpg',
       ],
       achievements: [

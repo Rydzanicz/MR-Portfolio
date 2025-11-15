@@ -45,7 +45,7 @@ export class HomeComponent implements OnInit {
       title: 'E-commerce GoldenTag.pl',
       description: 'Nowoczesna platforma e-commerce z procesem checkout i fakturowaniem',
       technologies: ['Java', 'Spring', 'PostgreSQL', 'Angular'],
-      image: 'assets/images/goldenTag/home.jpg',
+      image: 'assets/images/goldenTag/home.png',
       link: '/portfolio'
     }
   ];
