@@ -59,7 +59,7 @@ export class TranslationService {
       pdfSuccess: 'PDF został wygenerowany i pobrany pomyślnie!',
       pdfError: 'Wystąpił błąd podczas generowania PDF. Spróbuj ponownie.',
       currentPosition: 'FULL-STACK DEVELOPER',
-      profileDescription: 'Doświadczony full-stack developer z ponad 3-letnim doświadczeniem w branży IT. Specjalizuję się w projektowaniu i wdrażaniu rozwiązań Java/Spring oraz tworzeniu nowoczesnych interfejsów Angular. Mam doświadczenie w automatyzacji procesów biznesowych oraz optymalizacji wydajności systemów. Poszukuję nowych wyzwań technologicznych w środowisku, które ceni innowacyjność i rozwój.',
+      profileDescription: 'Doświadczony full‑stack developer z ponad 3‑letnim doświadczeniem w projektach komercyjnych. Specjalizuje się w tworzeniu aplikacji webowych w oparciu o Java/Spring na backendzie oraz Angular na frontendzie, ze szczególnym naciskiem na przejrzystą architekturę i wysoką jakość kodu. Ma praktyczne doświadczenie w automatyzacji procesów biznesowych – m.in. budowie własnego systemu sklepowego do obsługi automatycznych zamówień i wysyłki maili z powiadomieniami i fakturami. Szuka nowych wyzwań technologicznych w środowisku, które ceni odpowiedzialność end‑to‑end za produkt, możliwość wpływu na rozwiązania oraz ciągły rozwój kompetencji.',
       skillsList: [
         'Java 21+',
         'Spring Framework',
@@ -73,20 +73,20 @@ export class TranslationService {
         'Jenkins',
         'Git',
         'Junit, Mockito, Cucumber',
-        'Scram, JIRA',
+        'Scram, JIRA, Confluence',
+        'SOLID, DDD',
         'Umiejętność szybkiego uczenia się w nowych technologiach',
-        'Praca zespołowa i komunikacja w zespole',
+        'Umiejętność analitycznego myślenia oraz pracy w zespole',
         'Umiejętność korzystania z AI w codziennej pracy'
       ],
       languagesList: [
         {name: 'Polski', level: 'Ojczysty'},
-        {name: 'Angielski', level: 'B1 / B2'}
+        {name: 'Angielski', level: ' B2'}
       ],
       additionalList: [
         {icon: 'fas fa-car', text: 'Prawo jazdy kat. A i B'},
         {icon: 'fas fa-map-marked-alt', text: 'Gotowość do relokacji'},
         {icon: 'fas fa-network-wired', text: 'Doświadczenie w diagnozowaniu problemów integracji'},
-        {icon: 'fas fa-database', text: 'Analiza danych i raportowanie dla audytu'},
         {
           icon: 'fas fa-handshake',
           text: 'Komunikacja z zespołem technicznym integrującym się z naszym serwisem oraz codzienna komunikacja z osobami z biznesu'
@@ -101,10 +101,12 @@ export class TranslationService {
           title: 'Full-Stack Developer',
           location: 'Wrocław',
           achievements: [
-            'Rozwój aplikacji webowych z wykorzystaniem Angular i Spring',
-            'Implementacja rozwiązań automatyzacji procesów',
+            'Rozwój aplikacji webowych typu front‑end/back‑end z wykorzystaniem Angular i Spring, od projektowania po wdrożenie produkcyjne.',
             'Projektowanie interfejsów użytkownika',
-            'Integracja API systemów płatności i mailowych'
+            'Automatyzacja Procesu Sprawdzania statusu płatności oraz wysyłki maila z fakturą',
+            'Integracja API systemów płatności',
+            'Integracja API Map Inpost',
+            'Integracja API Allegro'
           ]
         },
         {
@@ -129,6 +131,7 @@ export class TranslationService {
           degree: 'Dyplom Studiów Technicznych',
           details: [
             'Kierunek: Informatyka / Inżynieria Oprogramowania',
+            'Pełnienie funkcji starosty grupy przez cały okres studiów',
             'Przewodniczący koła naukowego – organizacja dni otwartych i warsztatów technologicznych',
             'Prowadzenie korepetycji z programowania i IT',
             'Aktywna praca w zespołach projektowych, metodyki Scrum'
@@ -138,7 +141,8 @@ export class TranslationService {
       projectsList: [
         'Rozwój narzędzi automatyzujących procesy biznesowe (Java, Spring, Angular)',
         'Projekty dostępne na GitHub: github.com/Rydzanicz',
-        'Portfolio: viggoprogramer.pl'
+        'Portfolio: viggoprogramer.pl',
+        'Sklep: goldentag.pl'
       ]
     },
     en: {
@@ -155,7 +159,7 @@ export class TranslationService {
       pdfSuccess: 'PDF has been generated and downloaded successfully!',
       pdfError: 'An error occurred while generating PDF. Please try again.',
       currentPosition: 'FULL-STACK DEVELOPER',
-      profileDescription: 'Experienced full-stack developer with over 3 years of experience in the IT industry. I specialize in designing and implementing Java/Spring solutions and creating modern Angular interfaces. I have experience in business process automation and system performance optimization. I am looking for new technological challenges in an environment that values innovation and development.',
+      profileDescription: 'Experienced full‑stack developer with over 3 years of commercial experience. Specializes in building web applications using Java/Spring on the backend and Angular on the frontend, with a strong focus on clean architecture and high code quality. Has hands‑on experience in automating business processes – including designing and implementing a custom e‑commerce system for handling automatic orders and sending notification and invoice emails. Currently looking for new technological challenges in an environment that values end‑to‑end ownership of the product, real influence on technical decisions, and continuous skills development.',
       skillsList: [
         'Java 21+',
         'Spring Framework',
@@ -169,15 +173,15 @@ export class TranslationService {
         'Jenkins',
         'Git',
         'Junit, Mockito, Cucumber',
-        'Scram, JIRA',
-        'Clean code, DDD, DRY',
-        'Ability to quickly learn new technologies',
-        'Teamwork and team communication skills',
-        'Ability to use AI in daily work'
+        'Scram, JIRA, Confluence',
+        'SOLID, DDD',
+        'Ability to quickly learn and adapt to new technologies.',
+        'Strong analytical thinking skills and effective teamwork.',
+        'Proficient in using AI tools to support and optimize everyday work.'
       ],
       languagesList: [
         {name: 'Polish', level: 'Native'},
-        {name: 'English', level: 'B1 / B2'}
+        {name: 'English', level: 'B2'}
       ],
       additionalList: [
         {icon: 'fas fa-car', text: 'Driving license category A and B'},
@@ -198,10 +202,12 @@ export class TranslationService {
           title: 'Full-Stack Developer',
           location: 'Wrocław',
           achievements: [
-            'Development of web applications using Angular and Spring',
-            'Implementation of process automation solutions',
-            'User interface design',
-            'Integration of payment and mail system APIs'
+            'Development of end‑to‑end web applications (frontend and backend) using Angular and Spring, from initial design to production deployment.',
+            'Design and implementation of user interfaces focused on clarity and usability.',
+            'Automation of the process for checking payment status and sending invoice emails to customers.',
+            'Integration with external payment system APIs',
+            'Integration with InPost Maps API',
+            'Integration with Allegro APIs'
           ]
         },
         {
@@ -227,6 +233,7 @@ export class TranslationService {
           details: [
             'Field of study: Computer Science / Software Engineering',
             'Chair of scientific club – organization of open days and technology workshops',
+            'Serving as class representative for the entire duration of my studies.',
             'Conducting programming and IT tutoring',
             'Active participation in project teams, Scrum methodologies'
           ]
@@ -235,8 +242,8 @@ export class TranslationService {
       projectsList: [
         'Development of business process automation tools (Java, Spring, Angular)',
         'Projects available on GitHub: github.com/Rydzanicz',
-        'Portfolio: viggoprogramer.pl'
-      ]
+        'Portfolio: viggoprogramer.pl',
+        'Shop: goldentag.pl'      ]
     }
   };
 
