@@ -38,7 +38,7 @@ export class PortfolioComponent {
         'Optymalizowałem backend oraz tworzyłem REST API do połączenia z nową funkcjonalnością we współpracy z zespołem mobilnym.',
         'Optymalizowałem raporty dla księgowości.'
       ],
-      technologies: ['Java 19', 'Spring Boot', 'Angular 18', 'PostgreSQL', 'REST API', 'Microservices', 'Docker', 'GCP'],
+      technologies: ['Java 17', 'Spring Boot', 'Angular 18', 'PostgreSQL', 'REST API', 'Microservices', 'Docker', 'GCP'],
       features: [
         'Automatyczne harmonogramy spłat',
         'System nadpłat i dystrybucji zobowiązań',
