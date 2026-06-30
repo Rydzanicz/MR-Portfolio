@@ -63,8 +63,8 @@ export class CvComponent implements OnDestroy {
         throw new Error('Brak referencji do elementu cvContent!');
       }
       const filename = this.currentLanguage === 'pl'
-        ? 'Anna_Rydzanicz_CV_PL.pdf'
-        : 'Anna_Rydzanicz_CV_EN.pdf';
+        ? 'Sylwia_Wołkowicz_CV_PL.pdf'
+        : 'Sylwia_Wołkowicz_CV_EN.pdf';
 
       await this.pdfService.generatePDF(this.cvContent.nativeElement, filename);
       this.notificationService.showNotification(this.translation.pdfSuccess, 'success');
