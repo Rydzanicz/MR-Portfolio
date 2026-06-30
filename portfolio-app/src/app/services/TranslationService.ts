@@ -60,27 +60,31 @@ export class TranslationService {
       generatingPdf: 'Generowanie PDF...',
       pdfSuccess: 'PDF został wygenerowany i pobrany pomyślnie!',
       pdfError: 'Wystąpił błąd podczas generowania PDF. Spróbuj ponownie.',
-      currentPosition: 'Kierownik regionalny',
-      profileDescription: 'Jestem młodą osobą o wysokiej kulturze i organizacji pracy. Posiadam 6-letnie doświadczenie w obsłudze klienta oraz ponad 4 lata w organizacji imprez okolicznościowych. Czas spędzony na wdrażaniu planów i realizacji pomysłów klientów pozwolił mi wykształtować zmysł mentora. Jako osoba na stanowisku kierowniczym wielokrotnie miałam okazję do współpracy, jak i zarządzania ludźmi. Cechuje mnie odpowiedzialność i gotowość do działania. Lubię szukać i adaptować rozwiązania, zwiększając efektywność i satysfakcję pozostałych pracowników.',
+      currentPosition: 'Psycholog  ',
+      profileDescription: 'Psycholog z rocznym doświadczeniem w prowadzeniu zajęć psychologicznych dla dzieci i młodzieży. Pracuję w oparciu o uważność na potrzeby uczestników, dbając o budowanie bezpiecznej relacji i atmosfery sprzyjającej rozwojowi. Prowadziłam zarówno zajęcia indywidualne, jak i grupowe, skupiając się na wzmacnianiu kompetencji emocjonalnych, społecznych oraz umiejętności radzenia sobie w trudnych sytuacjach. Współpracuję z rodzicami i specjalistami, aby zapewnić spójne wsparcie i realną poprawę funkcjonowania dziecka. Jestem osobą zaangażowaną, odpowiedzialną i nastawioną na dalszy rozwój w pracy terapeutycznej, zarówno z dziećmi, jak i dorosłymi. ',
       skillsList: [
-        'Lider Lean Manufacturing',
-        'Wykorzystywanie metody SMED',
-        'Stosowanie Metody 5S',
-        'Myślenie lean',
+        'Praca z dziećmi i młodzieżą',
+        'Umiejętność tworzenia indywidualnych planów wsparcia',
+        'Planowanie i prowadzenie zajęć Treningu Umiejętności Społecznych',
+        'Budowanie bezpiecznej, wspierającej atmosfery w grupie',
+        'Moderowanie pracy grupowej i wspieranie interakcji między uczestnikami',
+        'Wzmacnianie kompetencji komunikacyjnych, emocjonalnych i społecznych',
+        'Prowadzenie konsultacji psychologicznych',
+        'Rekrutacja pracówników oraz szkolenia',
         'Wdrażanie standardów obsługi, procedur pracy, harmonogramów',
-         'Mapowanie strumienia wartości',
-        'Balansowanie linii produkcyjnej',
+         'Umiejętność strategicznego zarządzania zasobami ludzkimi',
         'Kontrolowanie jakości własnej pracy',
         'Prowadzenie audytów operacyjnych',
         'Umiejętność szybkiego uczenia się',
          'Umiejętności przekazywania wiedzy',
         'Praca w zespole',
+        'Budowanie pozytywnego wizerunku firmy',
         'Umiejętność korzystania z AI w codziennej pracy'
 
       ],
       languagesList: [
         {name: 'Polski', level: 'Ojczysty'},
-        {name: 'Angielski', level: ' A2/B1'}
+        {name: 'Angielski', level: 'B2'}
       ],
       additionalList: [
         {icon: 'fas fa-car', text: 'Prawo jazdy kat. B'},
@@ -90,67 +94,61 @@ export class TranslationService {
           text: 'Komunikatywność oraz zarządzanie ludźmi'
         },
         {icon: 'fas fa-file-alt', text: 'Dokumentacja/Raportowanie prac'},
-        {icon: 'fas fa-clock', text: 'Umiejętność pracy pod presją czasu'},
-        {icon: 'fas fa-users', text: 'Reprezentowanie koła podczas wydarzeń uczelnianych i branżowych'},
-        {icon: 'fas  fa-bolt', text: 'Tworzenie treści promocyjnych'}
+        {icon: 'fas fa-clock', text: 'Umiejętność pracy pod presją czasu'}
       ],experienceList: [
                 {
-                  company: 'KULE',
-                  period: 'styczeń 2023 – obecnie',
-                  title: 'Kierownik regionalny, Audytor, Szkoleniowiec',
-                  location: 'Opole/Wrocław',
+                  company: 'DUDU PsychoSensorycznie',
+                  period: 'Wrzesień 2025 – obecnie',
+                  title: 'Trener Umiejętności Społecznych (TUS)',
+                  location: 'Opole',
                   achievements: [
-                    'Kierownik regionalny odpowiedzialny za nadzór operacyjny oraz rozwój sieci punktów sprzedaży Bubble Tea w regionie',
-                    'Nadzór nad kilkoma lokalizacjami: kontrola jakości obsługi klienta, przestrzeganie standardów pracy oraz procedur operacyjnych',
-                    'Współpraca z opiekunami lokali i kadrami prowadzącymi, prowadzenie motywowania zespołu, treningi pracowników, pomoc w rozwiązywaniu problemów bieżących',
-                    'Praca z HR i marketingiem: zgłaszanie potrzeb kadrowych, wsparcie w kampaniach lokalnych, dbanie o atrakcyjność punktów w głowie klientów',
-                    'Monitorowanie i audytowanie punktów sprzedaży',
-                    'Szkolenie nowych pracowników'
+                   'Prowadzenie Treningów Umiejętności Społecznych (TUS) dla dzieci i młodzieży',
+                   'Wspieranie rozwoju kompetencji społecznych i emocjonalnych uczestników',
+                   'Praca nad komunikacją, relacjami i regulacją emocji',
+                   'Dostosowywanie metod pracy do indywidualnych potrzeb',
+                   'Współpraca z zespołem specjalistów'
                   ]
                 },
-
-        {
-          company: 'TechForKids',
-          period: 'czerwiec 2019 – grudzień 2023',
-          title: 'Instruktor',
-          location: 'Lubin',
-          achievements: [
-            'Tworzenie zajęć z robotyki dla dzieci',
-            'Obsługa strefy zabaw dla dzieci ',
-            'Animacja i obsługa gości na imprezach okolicznościowych'
-          ]
-        },
-                 {
-                   company: 'Organizacja imprez okolicznościowych',
-                   period: '2017 – 2021',
-                   title: '',
-                   location: '',
-                   achievements: [
-                     'Obsługa strefy gasronomicznej',
-                     'Obsługa gości na imprezach okolicznościowych'
-                   ]
-                 }
+              {
+                  company: 'Młodzież w Centrum',
+                  period: 'Wrzesień 2025 – obecnie',
+                  title: 'Koordynator projektu',
+                  location: 'Opole',
+                  achievements: [
+                    'Organizacja i koordynacja działań dla młodzieży',
+                    'Współtworzenie warsztatów rozwojowych',
+                    'Aktywizacja społeczna młodzieży',
+                    'Organizacja wydarzeń i spotkań',
+                    'Współpraca z zespołem projektowym',
+                    'Wsparcie psychologiczne młodzieży'
+                  ]
+                },
+              {
+                  company: 'KULE',
+                  period: 'lipiec 2023 – obecnie',
+                  title: 'Menager lokali usługowych, Specjalista ds. Public relations, Rekruter, Szkoleniowiec',
+                  location: 'Opole/Wrocław',
+                  achievements: [
+                    'Tworzenie i realizacja strategii komunikacji w social mediach',
+                    'Planowanie, tworzenie i publikacja treści (Instagram, TikTok, Snapchat)',
+                    'Tworzenie komunikacji marketingowej i wizerunkowej',
+                    'Współpraca przy kampaniach promocyjnych i akcjach marketingowych',
+                    'Prowadzenie procesów rekrutacyjnych',
+                     'Selekcja kandydatów i prowadzenie rozmów rekrutacyjnych',
+                     'Nadzór nad kilkoma lokalizacjami: kontrola jakości obsługi klienta, przestrzeganie standardów pracy oraz procedur operacyjnych',
+                     'Współpraca z opiekunami lokali i kadrami prowadzącymi, prowadzenie motywowania zespołu, treningi pracowników, pomoc w rozwiązywaniu problemów bieżących'
+                  ]
+                }
       ],
 educationList: [
   {
-    institution: 'Politechnika Opolska',
-    year: '2025 - obecnie',
-    degree: 'Dyplom Studiów Technicznych: Tytuł magistra',
-    field: 'Zarządzanie i inżynieria produkcji',
-    specialty: 'Zarządzanie projektami',
+    institution: 'Uniwersytet Opolski',
+    year: '2021 - 2026',
+    degree: 'Dyplom Studiów Wyższych: Tytuł magister',
+    field: 'Psychologia',
+        specialty: '',
     details: [
-      'Organizacja warsztatów i szkoleń dla studentów'
-    ]
-  },
-  {
-    institution: 'Politechnika Opolska',
-    year: '2021 - 2025',
-    degree: 'Dyplom Studiów Technicznych: Tytuł inżyniera',
-    field: 'Zarządzanie i inżynieria produkcji',
-    specialty: 'LEAN management',
-    details: [
-      'Aktywności i stowarzyszenia: Przedstawiciel koła oraz wsparcie ds. mediów w kole naukowym SKN Expert działającym przy kierunku Zarządzanie i Inżynieria Produkcji',
-      'Organizacja warsztatów i szkoleń dla studentów'
+      'Przygotowanie pedagogiczne'
     ]
   }
 ],
