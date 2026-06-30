@@ -28,12 +28,14 @@ export interface Translation {
     location: string;
     achievements: string[];
   }[];
-  educationList: {
-    institution: string;
-    year: string;
-    degree: string;
-    details: string[];
-  }[];
+educationList: {
+  institution: string;
+  year: string;
+  degree: string;
+  field: string;
+  specialty: string;
+  details: string[];
+}[];
   projectsList: string[];
 }
 
@@ -58,91 +60,101 @@ export class TranslationService {
       generatingPdf: 'Generowanie PDF...',
       pdfSuccess: 'PDF został wygenerowany i pobrany pomyślnie!',
       pdfError: 'Wystąpił błąd podczas generowania PDF. Spróbuj ponownie.',
-      currentPosition: 'FULL-STACK DEVELOPER',
-      profileDescription: 'Doświadczony full‑stack developer z ponad 3‑letnim doświadczeniem w projektach komercyjnych. Specjalizuje się w tworzeniu aplikacji webowych w oparciu o Java/Spring na backendzie oraz Angular na frontendzie, ze szczególnym naciskiem na przejrzystą architekturę i wysoką jakość kodu. Ma praktyczne doświadczenie w automatyzacji procesów biznesowych – m.in. budowie własnego systemu sklepowego do obsługi automatycznych zamówień i wysyłki maili z powiadomieniami i fakturami. Szuka nowych wyzwań technologicznych w środowisku, które ceni odpowiedzialność end‑to‑end za produkt, możliwość wpływu na rozwiązania oraz ciągły rozwój kompetencji.',
+      currentPosition: 'Kierownik regionalny',
+      profileDescription: 'Jestem młodą osobą o wysokiej kulturze i organizacji pracy. Posiadam 6-letnie doświadczenie w obsłudze klienta oraz ponad 4 lata w organizacji imprez okolicznościowych. Czas spędzony na wdrażaniu planów i realizacji pomysłów klientów pozwolił mi wykształtować zmysł mentora. Jako osoba na stanowisku kierowniczym wielokrotnie miałam okazję do współpracy, jak i zarządzania ludźmi. Cechuje mnie odpowiedzialność i gotowość do działania. Lubię szukać i adaptować rozwiązania, zwiększając efektywność i satysfakcję pozostałych pracowników.',
       skillsList: [
-        'Java 17+',
-        'Spring Framework',
-        'REST WebServices',
-        'Angular 19',
-        'MySQL',
-        'PostgreSQL',
-        'Hibernate',
-        'Docker',
-        'GCP',
-        'Jenkins',
-        'Git',
-        'Junit, Mockito, Cucumber',
-        'Scram, JIRA, Confluence',
-        'SOLID, DDD',
-        'Umiejętność szybkiego uczenia się w nowych technologiach',
-        'Umiejętność analitycznego myślenia oraz pracy w zespole',
+        'Lider Lean Manufacturing',
+        'Wykorzystywanie metody SMED',
+        'Stosowanie Metody 5S',
+        'Myślenie lean',
+        'Wdrażanie standardów obsługi, procedur pracy, harmonogramów',
+         'Mapowanie strumienia wartości',
+        'Balansowanie linii produkcyjnej',
+        'Kontrolowanie jakości własnej pracy',
+        'Prowadzenie audytów operacyjnych',
+        'Umiejętność szybkiego uczenia się',
+         'Umiejętności przekazywania wiedzy',
+        'Praca w zespole',
         'Umiejętność korzystania z AI w codziennej pracy'
+
       ],
       languagesList: [
         {name: 'Polski', level: 'Ojczysty'},
         {name: 'Angielski', level: ' A2/B1'}
       ],
       additionalList: [
-        {icon: 'fas fa-car', text: 'Prawo jazdy kat. A i B'},
+        {icon: 'fas fa-car', text: 'Prawo jazdy kat. B'},
         {icon: 'fas fa-map-marked-alt', text: 'Gotowość do relokacji'},
-        {icon: 'fas fa-network-wired', text: 'Doświadczenie w diagnozowaniu problemów integracji'},
         {
           icon: 'fas fa-handshake',
-          text: 'Komunikacja z zespołem technicznym integrującym się z naszym serwisem oraz codzienna komunikacja z osobami z biznesu'
+          text: 'Komunikatywność oraz zarządzanie ludźmi'
         },
-        {icon: 'fas fa-file-alt', text: 'Dokumentacja techniczna'},
-        {icon: 'fas fa-clock', text: 'Umiejętność pracy pod presją czasu'}
-      ],
-      experienceList: [
+        {icon: 'fas fa-file-alt', text: 'Dokumentacja/Raportowanie prac'},
+        {icon: 'fas fa-clock', text: 'Umiejętność pracy pod presją czasu'},
+        {icon: 'fas fa-users', text: 'Reprezentowanie koła podczas wydarzeń uczelnianych i branżowych'},
+        {icon: 'fas  fa-bolt', text: 'Tworzenie treści promocyjnych'}
+      ],experienceList: [
+                {
+                  company: 'KULE',
+                  period: 'styczeń 2023 – obecnie',
+                  title: 'Kierownik regionalny, Audytor, Szkoleniowiec',
+                  location: 'Opole/Wrocław',
+                  achievements: [
+                    'Kierownik regionalny odpowiedzialny za nadzór operacyjny oraz rozwój sieci punktów sprzedaży Bubble Tea w regionie',
+                    'Nadzór nad kilkoma lokalizacjami: kontrola jakości obsługi klienta, przestrzeganie standardów pracy oraz procedur operacyjnych',
+                    'Współpraca z opiekunami lokali i kadrami prowadzącymi, prowadzenie motywowania zespołu, treningi pracowników, pomoc w rozwiązywaniu problemów bieżących',
+                    'Praca z HR i marketingiem: zgłaszanie potrzeb kadrowych, wsparcie w kampaniach lokalnych, dbanie o atrakcyjność punktów w głowie klientów',
+                    'Monitorowanie i audytowanie punktów sprzedaży',
+                    'Szkolenie nowych pracowników'
+                  ]
+                },
+
         {
-          company: 'Viggo Programer',
-          period: 'styczeń 2025 – obecnie',
-          title: 'Full-Stack Developer',
-          location: 'Wrocław',
+          company: 'TechForKids',
+          period: 'czerwiec 2019 – grudzień 2023',
+          title: 'Instruktor',
+          location: 'Lubin',
           achievements: [
-            'Rozwój aplikacji webowych typu front‑end/back‑end z wykorzystaniem Angular i Spring, od projektowania po wdrożenie produkcyjne.',
-            'Projektowanie interfejsów użytkownika',
-            'Automatyzacja Procesu Sprawdzania statusu płatności oraz wysyłki maila z fakturą',
-            'Integracja API systemów płatności',
-            'Integracja API Map Inpost',
-            'Integracja API Allegro'
+            'Tworzenie zajęć z robotyki dla dzieci',
+            'Obsługa strefy zabaw dla dzieci ',
+            'Animacja i obsługa gości na imprezach okolicznościowych'
           ]
         },
-        {
-          company: 'Cinkciarz.pl',
-          period: 'czerwiec 2021 – grudzień 2024',
-          title: 'Full-Stack Developer',
-          location: 'Zielona Góra',
-          achievements: [
-            'Tworzenie innowacyjnych narzędzi bankowych i pożyczkowych w Java, Spring, MySQL, Rest Api i microservice',
-            'Implementacja automatycznych harmonogramów spłat, systemu nadpłat i dystrybucji zobowiązań',
-            'Optymalizacja kodu i wydajności systemów',
-            'Rozwój interfejsów użytkownika w Angular',
-            'Integracja frontendu z backendem, zapewnienie spójności i wysokiej wydajności',
-            'Praca z Docker, GCP, GIT'
-          ]
-        }
+                 {
+                   company: 'Organizacja imprez okolicznościowych',
+                   period: '2017 – 2021',
+                   title: '',
+                   location: '',
+                   achievements: [
+                     'Obsługa strefy gasronomicznej',
+                     'Obsługa gości na imprezach okolicznościowych'
+                   ]
+                 }
       ],
-      educationList: [
-        {
-          institution: 'Uniwersytet Zielonogórski',
-          year: '2023',
-          degree: 'Dyplom Studiów Technicznych',
-          details: [
-            'Kierunek: Informatyka / Inżynieria Oprogramowania',
-            'Pełnienie funkcji starosty grupy przez cały okres studiów',
-            'Przewodniczący koła naukowego – organizacja dni otwartych i warsztatów technologicznych',
-            'Prowadzenie korepetycji z programowania i IT',
-            'Aktywna praca w zespołach projektowych, metodyki Scrum'
-          ]
-        }
-      ],
+educationList: [
+  {
+    institution: 'Politechnika Opolska',
+    year: '2025 - obecnie',
+    degree: 'Dyplom Studiów Technicznych: Tytuł magistra',
+    field: 'Zarządzanie i inżynieria produkcji',
+    specialty: 'Zarządzanie projektami',
+    details: [
+      'Organizacja warsztatów i szkoleń dla studentów'
+    ]
+  },
+  {
+    institution: 'Politechnika Opolska',
+    year: '2021 - 2025',
+    degree: 'Dyplom Studiów Technicznych: Tytuł inżyniera',
+    field: 'Zarządzanie i inżynieria produkcji',
+    specialty: 'LEAN management',
+    details: [
+      'Aktywności i stowarzyszenia: Przedstawiciel koła oraz wsparcie ds. mediów w kole naukowym SKN Expert działającym przy kierunku Zarządzanie i Inżynieria Produkcji',
+      'Organizacja warsztatów i szkoleń dla studentów'
+    ]
+  }
+],
       projectsList: [
-        'Rozwój narzędzi automatyzujących procesy biznesowe (Java, Spring, Angular)',
-        'Projekty dostępne na GitHub: github.com/Rydzanicz',
-        'Portfolio: viggoprogramer.pl',
-        'Sklep: goldentag.pl'
       ]
     },
     en: {
@@ -225,20 +237,21 @@ export class TranslationService {
           ]
         }
       ],
-      educationList: [
-        {
-          institution: 'University of Zielona Góra',
-          year: '2023',
-          degree: 'Technical Studies Diploma',
-          details: [
-            'Field of study: Computer Science / Software Engineering',
-            'Chair of scientific club – organization of open days and technology workshops',
-            'Serving as class representative for the entire duration of my studies.',
-            'Conducting programming and IT tutoring',
-            'Active participation in project teams, Scrum methodologies'
-          ]
-        }
-      ],
+     educationList: [
+       {
+         institution: 'University of Zielona Góra',
+         year: '2023',
+         degree: 'Technical Studies Diploma',
+         field: 'Computer Science / Software Engineering',
+         specialty: '',
+         details: [
+           'Chair of the scientific club, responsible for organizing open days and technology workshops.',
+           'Class representative throughout the entire course of studies.',
+           'Provided programming and IT tutoring.',
+           'Active participant in project teams using Scrum methodologies.'
+         ]
+       }
+     ],
       projectsList: [
         'Development of business process automation tools (Java, Spring, Angular)',
         'Projects available on GitHub: github.com/Rydzanicz',
