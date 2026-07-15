@@ -22,7 +22,7 @@ interface Project {
   styleUrls: ['./portfolio.component.scss']
 })
 export class PortfolioComponent {
-  activeProject = 'goldentag';
+  activeProject = 'creditAgricole';
   selectedImage: string | null = null;
   hoveredSegment: number | null = null;
 
@@ -66,7 +66,7 @@ export class PortfolioComponent {
     {
       id: 'goldentag',
       company: 'GoldenTag.pl',
-      period: '2025 - 2025',
+      period: '2025 - 2026',
       title: 'E-commerce i System Zarządzania',
       descriptionPoints: [
         'Stworzyłem nowoczesną platformę e-commerce z zaawansowanym systemem personalizacji produktów.',
@@ -94,38 +94,35 @@ export class PortfolioComponent {
         'Integracja z płatnościmi online',
         "Automatyzacja maili i fakturowania"
       ],
-      link: 'https://goldentag.pl'
     },
-    {
-      id: 'WWart',
-      company: 'WWart.store',
-      period: '2025 - 2025',
-      title: 'E-commerce i System wysłaniam mail z eBookiem',
-      descriptionPoints: [
-        'Stworzyłem nowoczesną platformę e-commerce z zaawansowanym systemem wysyłki maili z fakturą oraz z eBookiem.',
-        'Zrealizowałem integracje z firmami kurierskimi, procesy checkout oraz system płatności online.'
+{
+  id: 'creditAgricole',
+  company: 'Crédit Agricole',
+  period: '2026 - obecnie',
+  title: 'Integracja Systemów Bankowych i Komunikacja Międzysystemowa',
+  descriptionPoints: [
+    'Wdrożyłem nową funkcjonalność łączącą frontend z dwoma niezależnymi backendami, które pobierają dane z różnych źródeł.',
+    'Zaprojektowałem przepływ, w którym zebrane dane są automatycznie przesyłane do systemu firmy zewnętrznej.',
+    'Zaimplementowałem komunikację międzysystemową z wykorzystaniem REST, SOAP oraz Apache Kafka, zapewniając wysoką wydajność i odporność na błędy.'
+  ],
+  technologies: ['Java 21', 'Spring Boot', 'Angular 19', 'REST API', 'SOAP', 'Apache Kafka', 'PostgreSQL', 'Docker'],
+  features: [
+    'Integracja frontendu z dwoma niezależnymi backendami',
+    'Automatyczne przesyłanie danych do systemu firmy zewnętrznej',
+    'Komunikacja REST i SOAP z systemami partnerskimi',
+    'Asynchroniczna wymiana danych przez Apache Kafka',
+    'Monitorowanie i obsługa błędów w czasie rzeczywistym'
+  ],
+images: [
+        'assets/images/CA/home.jpg',
+        'assets/images/CA/shop.jpg',
       ],
-
-      technologies: ['Java 21', 'Spring Boot', 'Angular 19', 'PostgreSQL', 'REST API', 'Docker', 'GCP'],
-      features: [
-        'Katalog produktów ',
-        'Koszyk i proces checkout',
-        'System płatności online',
-        'Automatyzacja procesu faktur',
-        'Analytics i raporty sprzedaży',
-        'Integracja z kurierami'
-      ],
-      images: [
-        'assets/images/WWart/home.jpg',
-        'assets/images/WWart/shop.jpg',
-        'assets/images/WWart/mail.jpg',
-      ],
-      achievements: [
-        'Integracja z Inpost',
-        'Integracja z płatnościmi online',
-        "Automatyzacja maili i fakturowania i Ebookami"
-      ]
-    }
+  achievements: [
+    'Zintegrowano dwa niezależne backendy z jednym frontendem',
+    'Wdrożono automatyczną wymianę danych z podmiotem zewnętrznym',
+    'Wprowadzono wielokanałową komunikację REST/SOAP/Kafka'
+  ]
+}
   ];
 
   get currentProject(): Project {
