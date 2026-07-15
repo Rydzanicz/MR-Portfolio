@@ -94,6 +94,7 @@ export class PortfolioComponent {
         'Integracja z płatnościmi online',
         "Automatyzacja maili i fakturowania"
       ],
+      link: 'https://goldentag.pl'
     },
 {
   id: 'creditAgricole',
@@ -121,7 +122,8 @@ images: [
     'Zintegrowano dwa niezależne backendy z jednym frontendem',
     'Wdrożono automatyczną wymianę danych z podmiotem zewnętrznym',
     'Wprowadzono wielokanałową komunikację REST/SOAP/Kafka'
-  ]
+  ],
+        link: 'https://www.credit-agricole.pl/klienci-indywidualni'
 }
   ];
 
