@@ -16,25 +16,26 @@ export class PdfService {
       );
       elementsToHide.forEach(el => el.style.display = 'none');
 
-      const options = {
-        scale: 2,
-        useCORS: true,
-        backgroundColor: '#ffffff',
-        width: element.offsetWidth,
-        height: element.offsetHeight,
-        onclone: (clonedDoc: Document) => {
-          const elementsToRemove = clonedDoc.querySelectorAll(
-            '.download-btn, .download-section, button, .language-switcher'
-          );
-          elementsToRemove.forEach(el => el.remove());
+   const options = {
+     scale: 2,
+     useCORS: true,
+     backgroundColor: '#ffffff',
+     width: element.offsetWidth,
+     height: element.offsetHeight,
+     windowWidth: element.scrollWidth,   // ← dodane: wymusza tę samą szerokość w klonie co na ekranie
+     windowHeight: element.scrollHeight, // ← dodane: to samo dla wysokości
+     onclone: (clonedDoc: Document) => {
+       const elementsToRemove = clonedDoc.querySelectorAll(
+         '.download-btn, .download-section, button, .language-switcher'
+       );
+       elementsToRemove.forEach(el => el.remove());
 
-          const clonedContainer = clonedDoc.getElementById('cv-content');
-          if (clonedContainer) {
-            clonedContainer.style.fontFamily = '"Open Sans", "Montserrat", Arial, sans-serif';
-          }
-        }
-      };
-
+       const clonedContainer = clonedDoc.getElementById('cv-content');
+       if (clonedContainer) {
+         clonedContainer.style.fontFamily = '"Open Sans", "Montserrat", Arial, sans-serif';
+       }
+     }
+   };
       html2canvas(element, options).then(canvas => {
         const imgData = canvas.toDataURL('image/png', 1.0);
         const pdf = new jsPDF({

@@ -190,16 +190,10 @@ body {
   color: #000000;
 }
 
-.experience-section,
-.education-section,
-.projects-section {
-  margin-bottom: 32px;
-}
-
 .experience-item,
 .education-item {
-  margin-bottom: 24px;
-  padding: 20px;
+  margin-bottom: 14px;
+  padding: 10px;
   background-color: #F8F9FA;
   border-radius: 8px;
   border-left: 4px solid #27AE60;
@@ -241,7 +235,7 @@ body {
 }
 
 .job-details {
-  margin-bottom: 12px;
+  margin-bottom: 2px;
 }
 
 .job-title,
@@ -268,7 +262,7 @@ body {
 .achievements li,
 .education-details li,
 .projects-list li {
-  margin-bottom: 8px;
+  margin-bottom: 2px;
   font-size: 18px;
   line-height: 1.6;
   color: #34495E;
@@ -295,7 +289,7 @@ body {
 }
 
 .download-section {
-  margin-top: 32px;
+  margin-top: 2px;
   padding-top: 20px;
   border-top: 2px solid #ECF0F1;
   display: flex;

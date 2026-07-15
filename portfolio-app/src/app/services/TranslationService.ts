@@ -96,6 +96,17 @@ export class TranslationService {
       ],
       experienceList: [
         {
+          company: 'Crédit Agricole',
+          period: 'styczeń 2025 – obecnie',
+          title: 'Full-Stack Developer',
+          location: 'Wrocław',
+          achievements: [
+            'Wdrożenie nowej funkcjonalności integrującej frontend z dwoma niezależnymi backendami pobierającymi dane z różnych systemów źródłowych',
+            'Zaprojektowanie automatycznego przesyłania zebranych danych do systemu firmy zewnętrznej',
+            'Implementacja komunikacji międzysystemowej z wykorzystaniem REST, SOAP oraz Apache Kafka'
+          ]
+        },
+        {
           company: 'Viggo Programer',
           period: 'styczeń 2025 – obecnie',
           title: 'Full-Stack Developer',
@@ -196,6 +207,17 @@ export class TranslationService {
         {icon: 'fas fa-clock', text: 'Ability to work under time pressure'}
       ],
       experienceList: [
+        {
+          company: 'Crédit Agricole',
+          period: 'January 2025 – present',
+          title: 'Full-Stack Developer',
+          location: 'Wrocław',
+          achievements: [
+            'Implemented a new feature integrating the frontend with two independent backends retrieving data from different source systems',
+            'Designed automated transfer of collected data to an external company\'s system',
+            'Implemented inter-system communication using REST, SOAP, and Apache Kafka'
+          ]
+        },
         {
           company: 'Viggo Programer',
           period: 'January 2025 – present',

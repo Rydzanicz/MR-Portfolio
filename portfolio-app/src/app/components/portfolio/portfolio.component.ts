@@ -93,8 +93,7 @@ export class PortfolioComponent {
         'Integracja z Inpost',
         'Integracja z płatnościmi online',
         "Automatyzacja maili i fakturowania"
-      ],
-      link: 'https://goldentag.pl'
+      ]
     },
 {
   id: 'creditAgricole',
