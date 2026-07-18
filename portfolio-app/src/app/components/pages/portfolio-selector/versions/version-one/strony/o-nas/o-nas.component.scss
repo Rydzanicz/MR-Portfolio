@@ -31,9 +31,12 @@
 .hero-actions { display: flex; gap: 14px; margin-top: 26px; flex-wrap: wrap; }
 .hero-emblem {
   display: grid; place-items: center;
-  font-size: 8rem;
-  color: var(--brand);
-  opacity: .9;
+}
+.hero-emblem img {
+  width: 100%;
+  max-width: 340px;
+  height: auto;
+  filter: drop-shadow(0 10px 24px rgba(31, 107, 65, .16));
 }
 
 .stats {
