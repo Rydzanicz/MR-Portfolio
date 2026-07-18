@@ -595,3 +595,159 @@ a:hover {
   .btn.ghost { background: transparent; color: var(--brand-dark); border: 2px solid var(--brand); }
   .btn.ghost:hover { background: var(--brand-light); }
 }
+/* ============================================================
+   MOTYW „A TACY SAMI" — WERSJA 2 (BŁĘKITNA, LATAWCE)
+   Dopisz ten blok NA KOŃCU pliku src/styles.scss.
+   Reguły są ograniczone do .atacysami-scope, więc NIE zmieniają
+   wyglądu portfolio.
+   Wymaga w index.html czcionek Poppins/Inter + Font Awesome.
+   ============================================================ */
+
+.atacysami-scope {
+  /* Paleta błękitów — od nieba po granat */
+  --brand:        #1E6FB8;   /* główny błękit */
+  --brand-dark:   #12507f;   /* granat/navy */
+  --brand-light:  #e6f2fb;   /* jasny błękit tła */
+  --sky:          #5BB8E8;   /* pogodne niebo */
+  --sky-soft:     #a9dcf5;
+  --accent:       #FFB627;   /* ciepły akcent — latawiec/słońce */
+  --accent-2:     #FF6B6B;   /* koralowy — ogon latawca */
+  --ink:          #16324a;   /* granatowy tekst */
+  --muted:        #5b7186;
+  --line:         #d9e6f2;
+  --bg:           #f2f8fd;   /* bardzo jasne niebo */
+  --card:         #ffffff;
+  --shadow:       0 6px 24px rgba(18, 80, 127, 0.10);
+  --radius:       18px;
+  --maxw:         1100px;
+
+  font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+  overflow-x: hidden;
+
+  * { box-sizing: border-box; }
+
+  h1, h2, h3, h4 {
+    font-family: 'Poppins', 'Inter', sans-serif;
+    color: var(--ink);
+    line-height: 1.2;
+    margin: 0 0 .5em;
+  }
+
+  a { color: var(--brand-dark); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  img { max-width: 100%; display: block; }
+
+  .container {
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .page {
+    padding: 48px 0 80px;
+    animation: ats-fade .4s ease;
+    position: relative;
+    z-index: 1;
+  }
+
+  @keyframes ats-fade {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: none; }
+  }
+
+  .page-header {
+    text-align: center;
+    max-width: 760px;
+    margin: 0 auto 44px;
+  }
+  .page-header .eyebrow {
+    display: inline-block;
+    font-size: .8rem;
+    font-weight: 600;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--brand);
+    background: var(--brand-light);
+    padding: 6px 14px;
+    border-radius: 999px;
+    margin-bottom: 16px;
+  }
+  .page-header h1 { font-size: clamp(1.9rem, 4vw, 2.8rem); }
+  .page-header p { color: var(--muted); font-size: 1.08rem; }
+
+  .card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 28px;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--brand);
+    color: #fff;
+    padding: 12px 22px;
+    border-radius: 999px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: background .2s, transform .2s;
+  }
+  .btn:hover { background: var(--brand-dark); text-decoration: none; transform: translateY(-2px); }
+  .btn.ghost { background: transparent; color: var(--brand-dark); border: 2px solid var(--brand); }
+  .btn.ghost:hover { background: var(--brand-light); }
+
+  /* --- Dekoracyjne latawce w tle --- */
+  .latawiec {
+    position: absolute;
+    width: 46px;
+    height: 46px;
+    pointer-events: none;
+    opacity: .5;
+    z-index: 0;
+    animation: lot 9s ease-in-out infinite;
+  }
+  .latawiec::before {
+    /* romb — czasza latawca */
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    transform: rotate(45deg);
+    border-radius: 6px;
+    box-shadow: 0 6px 14px rgba(18,80,127,.18);
+  }
+  .latawiec::after {
+    /* ogon latawca */
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    width: 2px;
+    height: 60px;
+    background:
+      radial-gradient(circle, var(--accent-2) 2px, transparent 3px) 0 6px/8px 14px repeat-y;
+    transform: translateX(-50%);
+  }
+  .latawiec.l1 { top: 90px;  left: 6%;   animation-delay: 0s;   }
+  .latawiec.l2 { top: 180px; right: 8%;  animation-delay: 1.5s; transform: scale(.8); opacity: .4; }
+  .latawiec.l3 { top: 60px;  left: 48%;  animation-delay: 3s;   transform: scale(1.1); opacity: .35; }
+
+  @keyframes lot {
+    0%, 100% { transform: translateY(0) rotate(-4deg); }
+    50%      { transform: translateY(-18px) rotate(4deg); }
+  }
+
+  @media (max-width: 700px) {
+    .latawiec { display: none; }
+  }
+}

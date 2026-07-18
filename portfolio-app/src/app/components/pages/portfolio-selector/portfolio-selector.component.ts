@@ -36,7 +36,7 @@ export class PortfolioSelectorComponent {
       title: 'Błękitna',
       description: 'Lekka, błękitna wersja inspirowana niebem i latawcami.',
       icon: 'fas fa-wind',
-      route: '/version-2'
+      route: '/atacysami-v2'
     },
     {
       id: 3,

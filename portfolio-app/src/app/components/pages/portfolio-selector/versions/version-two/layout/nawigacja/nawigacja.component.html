@@ -1,0 +1,21 @@
+<header class="topbar">
+  <a routerLink="/atacysami-v2/o-nas" class="brand" (click)="zamknijMenu()">
+    <img class="brand-logo" src="assets/images/ATS/logo-ats.png" alt="Logo „A Tacy Sami”">
+    <span class="brand-text">
+      <strong>„A Tacy Sami"</strong>
+      <small>Stowarzyszenie OPP · Lubin</small>
+    </span>
+  </a>
+
+  <button class="hamburger" (click)="przelaczMenu()" [attr.aria-expanded]="menuOtwarte" aria-label="Menu">
+    <i class="fa-solid" [class.fa-bars]="!menuOtwarte" [class.fa-xmark]="menuOtwarte"></i>
+  </button>
+
+  <nav class="menu" [class.open]="menuOtwarte">
+    <a routerLink="/atacysami-v2/o-nas" routerLinkActive="active" (click)="zamknijMenu()">O nas</a>
+    <a routerLink="/atacysami-v2/statut" routerLinkActive="active" (click)="zamknijMenu()">Statut</a>
+    <a routerLink="/atacysami-v2/wladze" routerLinkActive="active" (click)="zamknijMenu()">Władze</a>
+    <a routerLink="/atacysami-v2/partnerzy" routerLinkActive="active" (click)="zamknijMenu()">Partnerzy</a>
+    <a routerLink="/atacysami-v2/sprawozdania" routerLinkActive="active" (click)="zamknijMenu()">Sprawozdania</a>
+  </nav>
+</header>

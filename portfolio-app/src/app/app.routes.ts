@@ -7,6 +7,7 @@ import {ContactComponent} from './components/contact/contact.component';
 import {CollaborationComponent} from './components/collaboration/collaboration.component';
 import {PortfolioSelectorComponent} from './components/pages/portfolio-selector/portfolio-selector.component';
 import {ATACYSAMI_ROUTES} from './components/pages/portfolio-selector/versions/version-one/atacysami.routes';
+import {ATACYSAMI_V2_ROUTES} from './components/pages/portfolio-selector/versions/version-two/atacysami-v2.routes';
 
 
 export const routes: Routes = [
@@ -14,6 +15,7 @@ export const routes: Routes = [
   {path: 'portfolio', component: PortfolioComponent},
   {path: 'portfolio-selector', component: PortfolioSelectorComponent},
   ...ATACYSAMI_ROUTES,
+  ...ATACYSAMI_V2_ROUTES,
   {path: 'contact', component: ContactComponent},
   {path: 'cv', component: CvComponent},
   {path: 'wspolpraca', component: CollaborationComponent},
