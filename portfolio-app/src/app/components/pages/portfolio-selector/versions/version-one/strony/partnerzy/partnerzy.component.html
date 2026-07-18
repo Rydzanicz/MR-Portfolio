@@ -1,0 +1,25 @@
+<section class="container page">
+  <div class="page-header">
+    <span class="eyebrow">Współpraca</span>
+    <h1>Nasi Partnerzy</h1>
+    <p>Nasze działania są możliwe dzięki wsparciu instytucji publicznych, samorządów,
+      firm oraz darczyńców. Dziękujemy każdemu, kto pomaga nam wspierać dzieci i młodzież.</p>
+  </div>
+
+  <div class="logo-grid">
+    <div class="logo-card" *ngFor="let p of partnerzy">
+      <div class="logo-box">
+        <img [src]="p.logo" [alt]="p.nazwa" loading="lazy" />
+      </div>
+      <strong>{{ p.nazwa }}</strong>
+      <span *ngIf="p.opis">{{ p.opis }}</span>
+    </div>
+  </div>
+
+  <div class="dodatkowi card">
+    <h3><i class="fa-solid fa-handshake"></i> Współpracujemy również z</h3>
+    <div class="chips">
+      <span class="chip" *ngFor="let d of dodatkowi">{{ d }}</span>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,86 @@
+:host { display: block; }
+
+.wykres { margin-bottom: 40px; }
+.wykres h3 { margin-bottom: 24px; }
+.bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+  height: 240px;
+  padding-top: 20px;
+}
+.bar-wrap {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  justify-content: flex-end;
+}
+.bar {
+  width: 100%;
+  max-width: 60px;
+  background: linear-gradient(180deg, var(--sky), var(--brand));
+  border-radius: 8px 8px 0 0;
+  position: relative;
+  min-height: 8px;
+  transition: opacity .2s;
+  display: flex;
+  justify-content: center;
+}
+.bar:hover { opacity: .85; }
+.bar.deficit { background: linear-gradient(180deg, #f2a4a4, #e05757); }
+.bar-val {
+  position: absolute;
+  top: -22px;
+  font-size: .68rem;
+  font-weight: 600;
+  color: var(--ink);
+  white-space: nowrap;
+  transform: rotate(-90deg);
+  transform-origin: left bottom;
+  left: 50%;
+}
+.bar-lbl { margin-top: 10px; font-size: .82rem; font-weight: 600; color: var(--muted); }
+
+.lista {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 18px;
+}
+.rok-card {
+  display: block;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 22px;
+  color: var(--ink);
+  transition: transform .2s, box-shadow .2s;
+}
+.rok-card:hover { transform: translateY(-4px); box-shadow: 0 12px 30px rgba(31,107,65,.12); text-decoration: none; }
+.rok-head { display: flex; justify-content: space-between; align-items: center; }
+.rok {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--brand);
+}
+.wynik { font-weight: 700; font-size: .95rem; padding: 4px 10px; border-radius: 999px; }
+.wynik.plus { color: var(--brand-dark); background: var(--brand-light); }
+.wynik.minus { color: #c0392b; background: #fdecec; }
+.rok-stats { display: flex; gap: 16px; margin: 14px 0; color: var(--muted); font-size: .88rem; }
+.rok-stats i { color: var(--brand); margin-right: 5px; }
+.rok-foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+  font-size: .9rem;
+}
+.rok-foot i { color: var(--brand); }
+
+@media (max-width: 600px) {
+  .bar-val { display: none; }
+}

@@ -28,7 +28,7 @@ export class PortfolioSelectorComponent {
       title: 'Klasyczna',
       description: 'Czysta, minimalistyczna wersja w bieli i jasnych, pastelowych barwach.',
       icon: 'fas fa-file-lines',
-      route: '/version-1'
+      route: '/atacysami'
     },
     {
       id: 2,
