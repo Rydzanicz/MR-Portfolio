@@ -1,0 +1,84 @@
+<section class="container page" *ngIf="raport as r; else brak">
+  <a routerLink="/atacysami/sprawozdania" class="wstecz"><i class="fa-solid fa-arrow-left"></i> Wszystkie sprawozdania</a>
+
+  <div class="page-header">
+    <span class="eyebrow">Sprawozdanie merytoryczne</span>
+    <h1>Rok {{ r.rok }}</h1>
+    <p>{{ r.nazwaOrganizacji }}</p>
+  </div>
+
+  <div *ngIf="r.uwaga" class="uwaga">
+    <i class="fa-solid fa-circle-info"></i> {{ r.uwaga }}
+  </div>
+
+  <!-- Kluczowe liczby -->
+  <div class="kpi-grid">
+    <div class="kpi"><span class="k-num">{{ r.odbiorcy }}</span><span class="k-lbl">odbiorców</span></div>
+    <div class="kpi"><span class="k-num">{{ r.czlonkowie }}</span><span class="k-lbl">członków</span></div>
+    <div class="kpi"><span class="k-num">{{ r.finanse.przychody }}</span><span class="k-lbl">przychody</span></div>
+    <div class="kpi" [class.deficit]="!r.finanse.wynikDodatni">
+      <span class="k-num">{{ r.finanse.wynik }}</span><span class="k-lbl">wynik finansowy</span>
+    </div>
+  </div>
+
+  <div class="dwie-kolumny">
+    <!-- Działania -->
+    <div class="card">
+      <h3><i class="fa-solid fa-hand-holding-heart"></i> Najważniejsze działania</h3>
+      <ul class="dzialania">
+        <li *ngFor="let d of r.dzialania">{{ d }}</li>
+      </ul>
+    </div>
+
+    <!-- Zadania konkursowe -->
+    <div class="card">
+      <h3><i class="fa-solid fa-trophy"></i> Zadania dotowane / konkursowe</h3>
+      <div class="zadanie" *ngFor="let z of r.zadaniaKonkursowe">
+        <strong>{{ z.nazwa }}</strong>
+        <span *ngIf="z.szczegoly">{{ z.szczegoly }}</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Finanse szczegółowe -->
+  <div class="card finanse">
+    <h3><i class="fa-solid fa-coins"></i> Dane finansowe</h3>
+    <div class="fin-grid">
+      <div><span>Przychody ogółem</span><strong>{{ r.finanse.przychody }}</strong></div>
+      <div><span>Koszty ogółem</span><strong>{{ r.finanse.koszty }}</strong></div>
+      <div><span>Wynik finansowy</span><strong [class.plus]="r.finanse.wynikDodatni" [class.minus]="!r.finanse.wynikDodatni">{{ r.finanse.wynik }}</strong></div>
+      <div *ngIf="r.finanse.procentPodatku"><span>Wpływy z 1,5% podatku</span><strong>{{ r.finanse.procentPodatku }}</strong></div>
+      <div *ngIf="r.finanse.dotacje"><span>Dotacje</span><strong>{{ r.finanse.dotacje }}</strong></div>
+      <div *ngIf="r.finanse.darowizny"><span>Darowizny</span><strong>{{ r.finanse.darowizny }}</strong></div>
+      <div *ngIf="r.finanse.wynagrodzenia"><span>Wynagrodzenia</span><strong>{{ r.finanse.wynagrodzenia }}</strong></div>
+    </div>
+  </div>
+
+  <!-- Współpraca -->
+  <div class="wspolpraca">
+    <h4>Zasięg: <span>{{ r.zasieg }}</span></h4>
+    <div class="chips">
+      <span class="chip" *ngFor="let w of r.wspolpraca">{{ w }}</span>
+    </div>
+  </div>
+
+  <!-- Nawigacja między latami -->
+  <div class="rok-nav">
+    <a *ngIf="poprzedni" [routerLink]="['/atacysami/sprawozdania', poprzedni]" class="btn ghost">
+      <i class="fa-solid fa-arrow-left"></i> {{ poprzedni }}
+    </a>
+    <span class="spacer"></span>
+    <a *ngIf="nastepny" [routerLink]="['/atacysami/sprawozdania', nastepny]" class="btn ghost">
+      {{ nastepny }} <i class="fa-solid fa-arrow-right"></i>
+    </a>
+  </div>
+</section>
+
+<ng-template #brak>
+  <section class="container page">
+    <div class="page-header">
+      <h1>Nie znaleziono sprawozdania</h1>
+      <p>Wybierz rok z <a routerLink="/atacysami/sprawozdania">listy sprawozdań</a>.</p>
+    </div>
+  </section>
+</ng-template>

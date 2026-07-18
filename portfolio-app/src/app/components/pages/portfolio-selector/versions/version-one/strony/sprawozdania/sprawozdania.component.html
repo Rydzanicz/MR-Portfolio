@@ -1,0 +1,41 @@
+<section class="container page">
+  <div class="page-header">
+    <span class="eyebrow">Jawność i przejrzystość</span>
+    <h1>Sprawozdania merytoryczne</h1>
+    <p>Jako organizacja pożytku publicznego co roku publikujemy sprawozdanie z działalności.
+      Poniżej znajdziesz komplet sprawozdań za lata 2018–2025.</p>
+  </div>
+
+  <!-- Wykres przychodów -->
+  <div class="wykres card">
+    <h3>Przychody w latach 2018–2025</h3>
+    <div class="bars">
+      <div class="bar-wrap" *ngFor="let s of sprawozdania.slice().reverse()">
+        <div class="bar" [style.height.%]="wysokoscSlupka(s)" [class.deficit]="!s.finanse.wynikDodatni">
+          <span class="bar-val">{{ s.finanse.przychody }}</span>
+        </div>
+        <span class="bar-lbl">{{ s.rok }}</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Lista sprawozdań -->
+  <div class="lista">
+    <a class="rok-card" *ngFor="let s of sprawozdania" [routerLink]="['/atacysami/sprawozdania', s.rok]">
+      <div class="rok-head">
+        <span class="rok">{{ s.rok }}</span>
+        <span class="wynik" [class.plus]="s.finanse.wynikDodatni" [class.minus]="!s.finanse.wynikDodatni">
+          {{ s.finanse.wynik }}
+        </span>
+      </div>
+      <div class="rok-stats">
+        <span><i class="fa-solid fa-users"></i> {{ s.odbiorcy }} odbiorców</span>
+        <span><i class="fa-solid fa-id-card"></i> {{ s.czlonkowie }} członków</span>
+      </div>
+      <div class="rok-foot">
+        <span>Przychody: <strong>{{ s.finanse.przychody }}</strong></span>
+        <i class="fa-solid fa-arrow-right"></i>
+      </div>
+    </a>
+  </div>
+</section>

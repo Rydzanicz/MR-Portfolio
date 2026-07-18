@@ -1,0 +1,34 @@
+<header class="topbar">
+  <a routerLink="/atacysami/o-nas" class="brand" (click)="zamknijMenu()">
+    <span class="brand-mark" aria-hidden="true">
+      <i class="fa-solid fa-hands-holding-child"></i>
+    </span>
+    <span class="brand-text">
+      <strong>„A Tacy Sami"</strong>
+      <small>Stowarzyszenie OPP · Lubin</small>
+    </span>
+  </a>
+
+  <button class="hamburger" (click)="przelaczMenu()" [attr.aria-expanded]="menuOtwarte" aria-label="Menu">
+    <i class="fa-solid" [class.fa-bars]="!menuOtwarte" [class.fa-xmark]="menuOtwarte"></i>
+  </button>
+
+  <nav class="menu" [class.open]="menuOtwarte">
+    <a routerLink="/atacysami/o-nas" routerLinkActive="active" (click)="zamknijMenu()">O nas</a>
+    <a routerLink="/atacysami/statut" routerLinkActive="active" (click)="zamknijMenu()">Statut</a>
+    <a routerLink="/atacysami/wladze" routerLinkActive="active" (click)="zamknijMenu()">Władze</a>
+    <a routerLink="/atacysami/partnerzy" routerLinkActive="active" (click)="zamknijMenu()">Partnerzy</a>
+
+    <div class="dropdown" [class.open]="raportyOtwarte">
+      <button class="dropdown-toggle" (click)="raportyOtwarte = !raportyOtwarte">
+        Sprawozdania <i class="fa-solid fa-chevron-down"></i>
+      </button>
+      <div class="dropdown-menu">
+        <a routerLink="/atacysami/sprawozdania" routerLinkActive="active" (click)="zamknijMenu()">Wszystkie lata</a>
+        <a *ngFor="let rok of lata" [routerLink]="['/atacysami/sprawozdania', rok]" routerLinkActive="active" (click)="zamknijMenu()">
+          {{ rok }}
+        </a>
+      </div>
+    </div>
+  </nav>
+</header>

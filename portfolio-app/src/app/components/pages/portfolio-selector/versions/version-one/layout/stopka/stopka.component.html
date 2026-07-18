@@ -1,0 +1,46 @@
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="fcol">
+      <h4>{{ org.nazwaSkrocona }}</h4>
+      <p class="mission">{{ org.formaPrawna }}</p>
+      <p class="bank"><i class="fa-solid fa-heart"></i> Wesprzyj nas — przekaż 1,5% podatku</p>
+    </div>
+
+    <div class="fcol">
+      <h4>Kontakt</h4>
+      <ul class="clean">
+        <li><i class="fa-solid fa-location-dot"></i> {{ org.adres }}</li>
+        <li><i class="fa-solid fa-phone"></i> {{ org.telefon }}</li>
+        <li><i class="fa-solid fa-envelope"></i> {{ org.email }}</li>
+        <li><i class="fa-solid fa-globe"></i> {{ org.www }}</li>
+      </ul>
+    </div>
+
+    <div class="fcol">
+      <h4>Dane rejestrowe</h4>
+      <ul class="clean">
+        <li>KRS: {{ org.krs }}</li>
+        <li>REGON: {{ org.regon }}</li>
+        <li>NIP: {{ org.nip }}</li>
+        <li class="konto">Konto: {{ org.konto }}</li>
+      </ul>
+    </div>
+
+    <div class="fcol">
+      <h4>Nawigacja</h4>
+      <ul class="clean links">
+        <li><a routerLink="/atacysami/o-nas">O nas</a></li>
+        <li><a routerLink="/atacysami/statut">Statut</a></li>
+        <li><a routerLink="/atacysami/wladze">Władze</a></li>
+        <li><a routerLink="/atacysami/partnerzy">Partnerzy</a></li>
+        <li><a routerLink="/atacysami/sprawozdania">Sprawozdania</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="copyright">
+    <div class="container">
+      © {{ rok }} {{ org.nazwaPelna }}. Wszelkie prawa zastrzeżone.
+    </div>
+  </div>
+</footer>

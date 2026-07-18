@@ -1,0 +1,89 @@
+<!-- HERO -->
+<section class="hero">
+  <div class="container hero-inner">
+    <div class="hero-text">
+      <span class="badge">Organizacja Pożytku Publicznego · od 2008 r.</span>
+      <h1>Razem sprawiamy, że każde dziecko czuje się <em>tak samo ważne</em></h1>
+      <p>{{ org.misja }}</p>
+      <div class="hero-actions">
+        <a routerLink="/atacysami/sprawozdania" class="btn">Zobacz nasze działania</a>
+        <a routerLink="/atacysami/partnerzy" class="btn ghost">Nasi partnerzy</a>
+      </div>
+    </div>
+    <div class="hero-emblem" aria-hidden="true">
+      <i class="fa-solid fa-hands-holding-child"></i>
+    </div>
+  </div>
+</section>
+
+<!-- STATYSTYKI -->
+<section class="container stats">
+  <div class="stat">
+    <span class="num">{{ lataDzialania }}</span>
+    <span class="lbl">lat działalności</span>
+  </div>
+  <div class="stat">
+    <span class="num">{{ laczniOdbiorcy }}+</span>
+    <span class="lbl">odbiorców wsparcia</span>
+  </div>
+  <div class="stat">
+    <span class="num">{{ liczbaSprawozdan }}</span>
+    <span class="lbl">sprawozdań rocznych</span>
+  </div>
+  <div class="stat">
+    <span class="num">1,5%</span>
+    <span class="lbl">podatku możesz przekazać</span>
+  </div>
+</section>
+
+<!-- O NAS -->
+<section class="container page">
+  <div class="page-header">
+    <span class="eyebrow">Kim jesteśmy</span>
+    <h1>Stowarzyszenie „A Tacy Sami"</h1>
+    <p>{{ org.nazwaPelna }}</p>
+  </div>
+
+  <div class="info-grid">
+    <div class="card info-card">
+      <i class="fa-solid fa-bullseye ic"></i>
+      <h3>Nasza misja</h3>
+      <p>{{ org.misja }}</p>
+    </div>
+    <div class="card info-card">
+      <i class="fa-solid fa-location-dot ic"></i>
+      <h3>Gdzie działamy</h3>
+      <p>Działamy przy Ośrodku Szkolno-Wychowawczym w Lubinie, obejmując wsparciem
+        gminę, powiat lubiński oraz całe województwo dolnośląskie.</p>
+      <ul class="mini">
+        <li><strong>Adres:</strong> {{ org.adres }}</li>
+        <li><strong>KRS:</strong> {{ org.krs }}</li>
+        <li><strong>Rejestracja:</strong> {{ org.dataRejestracji }}</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- CELE -->
+  <h2 class="section-title">Jak realizujemy nasze cele</h2>
+  <div class="cele-grid">
+    <div class="cel" *ngFor="let c of cele; let i = index">
+      <span class="cel-num">{{ i + 1 }}</span>
+      <p>{{ c }}</p>
+    </div>
+  </div>
+
+  <!-- OBSZARY -->
+  <h2 class="section-title">Obszary działalności pożytku publicznego</h2>
+  <div class="tags">
+    <span class="tag" *ngFor="let o of obszary">{{ o }}</span>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta card">
+    <div>
+      <h3>Wesprzyj nasze działania</h3>
+      <p>Przekaż 1,5% podatku lub darowiznę na konto: <strong>{{ org.konto }}</strong></p>
+    </div>
+    <a routerLink="/atacysami/partnerzy" class="btn">Dowiedz się więcej</a>
+  </div>
+</section>
