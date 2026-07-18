@@ -1,0 +1,40 @@
+<section class="container page">
+  <div class="page-header">
+    <span class="eyebrow">Ludzie stowarzyszenia</span>
+    <h1>Władze Stowarzyszenia</h1>
+    <p>Organami stowarzyszenia są Walne Zebranie Członków, Zarząd oraz Komisja Rewizyjna.
+      Poniżej przedstawiamy aktualny skład osobowy (kadencja 4-letnia).</p>
+  </div>
+
+  <!-- ZARZĄD -->
+  <h2 class="grp-title"><i class="fa-solid fa-briefcase"></i> Zarząd</h2>
+  <div class="osoby-grid">
+    <div class="osoba card" *ngFor="let o of zarzad">
+      <div class="avatar">{{ inicjaly(o) }}</div>
+      <strong>{{ o.imieNazwisko }}</strong>
+      <span class="funkcja">{{ o.funkcja }}</span>
+    </div>
+  </div>
+
+  <!-- KOMISJA REWIZYJNA -->
+  <h2 class="grp-title"><i class="fa-solid fa-scale-balanced"></i> Komisja Rewizyjna</h2>
+  <div class="osoby-grid">
+    <div class="osoba card" *ngFor="let o of komisja">
+      <div class="avatar rev">{{ inicjaly(o) }}</div>
+      <strong>{{ o.imieNazwisko }}</strong>
+      <span class="funkcja">{{ o.funkcja }}</span>
+    </div>
+  </div>
+
+  <!-- POZOSTAŁE FUNKCJE -->
+  <h2 class="grp-title"><i class="fa-solid fa-user-gear"></i> Pozostałe funkcje i komisje</h2>
+  <div class="inne-grid">
+    <div class="inne-item" *ngFor="let o of inne">
+      <i class="fa-solid fa-circle-check"></i>
+      <div>
+        <strong>{{ o.imieNazwisko }}</strong>
+        <span>{{ o.funkcja }}</span>
+      </div>
+    </div>
+  </div>
+</section>

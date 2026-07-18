@@ -1,0 +1,44 @@
+<section class="container page">
+  <div class="page-header">
+    <span class="eyebrow">Jawność i przejrzystość</span>
+    <h1>Sprawozdania merytoryczne</h1>
+    <p>Jako organizacja pożytku publicznego co roku publikujemy sprawozdanie z działalności.
+      Poniżej możesz pobrać komplet sprawozdań (PDF) za lata 2018–2025.</p>
+  </div>
+
+  <!-- Wykres przychodów -->
+  <div class="wykres card">
+    <h3>Przychody w latach 2018–2025</h3>
+    <div class="bars">
+      <div class="bar-wrap" *ngFor="let s of sprawozdania.slice().reverse()">
+        <div class="bar" [style.height.%]="wysokoscSlupka(s)" [class.deficit]="!s.finanse.wynikDodatni">
+          <span class="bar-val">{{ s.finanse.przychody }}</span>
+        </div>
+        <span class="bar-lbl">{{ s.rok }}</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Lista sprawozdań do pobrania -->
+  <div class="lista">
+    <div class="rok-card" *ngFor="let s of sprawozdania">
+      <div class="rok-head">
+        <span class="rok">{{ s.rok }}</span>
+        <span class="wynik" [class.plus]="s.finanse.wynikDodatni" [class.minus]="!s.finanse.wynikDodatni">
+          {{ s.finanse.wynik }}
+        </span>
+      </div>
+      <div class="rok-stats">
+        <span><i class="fa-solid fa-users"></i> {{ s.odbiorcy }} odbiorców</span>
+        <span><i class="fa-solid fa-id-card"></i> {{ s.czlonkowie }} członków</span>
+      </div>
+      <div class="rok-przychody">
+        Przychody: <strong>{{ s.finanse.przychody }}</strong>
+      </div>
+      <a class="btn-pobierz" [href]="s.plik" [download]="'Sprawozdanie-ATacySami-' + s.rok + '.pdf'" target="_blank" rel="noopener">
+        <i class="fa-solid fa-file-arrow-down"></i>
+        Pobierz sprawozdanie {{ s.rok }} (PDF)
+      </a>
+    </div>
+  </div>
+</section>

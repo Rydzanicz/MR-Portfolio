@@ -1,0 +1,57 @@
+<section class="container page">
+  <div class="page-header">
+    <span class="eyebrow">Dokument założycielski</span>
+    <h1>Statut Stowarzyszenia</h1>
+    <p>Statut przyjęty {{ meta.dataPrzyjecia }}. Składa się z {{ meta.liczbaRozdzialow }} rozdziałów
+      i {{ meta.liczbaParagrafow }} paragrafów regulujących cele, członkostwo, władze i majątek stowarzyszenia.</p>
+  </div>
+
+  <div class="statut-layout">
+    <!-- Spis rozdziałów -->
+    <aside class="spis">
+      <h4>Spis rozdziałów</h4>
+      <button
+        *ngFor="let r of rozdzialy; let i = index"
+        class="spis-item"
+        [class.active]="aktywny === i"
+        (click)="wybierz(i)">
+        <span class="rz">Rozdz. {{ r.numer }}</span>
+        <span class="tt">{{ r.tytul }}</span>
+        <small>{{ r.paragrafy }}</small>
+      </button>
+    </aside>
+
+    <!-- Treść wybranego rozdziału -->
+    <div class="tresc card">
+      <div class="tresc-head">
+        <span class="chip">Rozdział {{ rozdzialy[aktywny].numer }} · {{ rozdzialy[aktywny].paragrafy }}</span>
+        <h2>{{ rozdzialy[aktywny].tytul }}</h2>
+      </div>
+      <p class="lead">{{ rozdzialy[aktywny].opis }}</p>
+
+      <!-- Rozdział II — cele i obszary rozwinięte -->
+      <div *ngIf="aktywny === 1" class="rozwiniecie">
+        <h3><i class="fa-solid fa-list-check"></i> Sposoby realizacji celów (wybrane z 23)</h3>
+        <ul class="cele-lista">
+          <li *ngFor="let c of cele">{{ c }}</li>
+        </ul>
+        <h3><i class="fa-solid fa-layer-group"></i> Obszary działalności pożytku publicznego</h3>
+        <div class="tags">
+          <span class="tag" *ngFor="let o of obszary">{{ o }}</span>
+        </div>
+      </div>
+
+      <!-- Rozdział IV — władze -->
+      <div *ngIf="aktywny === 3" class="rozwiniecie">
+        <div class="organy">
+          <div class="organ"><i class="fa-solid fa-users"></i><strong>Walne Zebranie Członków</strong><span>Najwyższa władza</span></div>
+          <div class="organ"><i class="fa-solid fa-briefcase"></i><strong>Zarząd</strong><span>min. 6 osób</span></div>
+          <div class="organ"><i class="fa-solid fa-scale-balanced"></i><strong>Komisja Rewizyjna</strong><span>min. 2 osoby</span></div>
+        </div>
+        <p class="note"><i class="fa-solid fa-circle-info"></i> Kadencja organów trwa 4 lata.</p>
+      </div>
+    </div>
+  </div>
+
+  <p class="podpisy"><i class="fa-solid fa-signature"></i> {{ meta.podpisy }}</p>
+</section>
