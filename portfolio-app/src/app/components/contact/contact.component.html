@@ -38,42 +38,42 @@
 
   </div>
 
-  <div class="contact-form contact-container">
+<!--  <div class="contact-form contact-container">-->
 
-    <h3 class="section-title">Napisz do mnie</h3>
+<!--    <h3 class="section-title">Napisz do mnie</h3>-->
 
-    <form (ngSubmit)="onSubmit()" *ngIf="!submitted" novalidate>
-      <div class="form-group">
-        <label for="name">Imię i nazwisko</label>
-        <input id="name" type="text" [(ngModel)]="name" name="name" required autocomplete="name"/>
-      </div>
+<!--    <form (ngSubmit)="onSubmit()" *ngIf="!submitted" novalidate>-->
+<!--      <div class="form-group">-->
+<!--        <label for="name">Imię i nazwisko</label>-->
+<!--        <input id="name" type="text" [(ngModel)]="name" name="name" required autocomplete="name"/>-->
+<!--      </div>-->
 
-      <div class="form-group">
-        <label for="email">Adres e-mail</label>
-        <input id="email" type="email" [(ngModel)]="addressEmail" name="email" required autocomplete="email"/>
-      </div>
+<!--      <div class="form-group">-->
+<!--        <label for="email">Adres e-mail</label>-->
+<!--        <input id="email" type="email" [(ngModel)]="addressEmail" name="email" required autocomplete="email"/>-->
+<!--      </div>-->
 
-      <div class="form-group">
-        <label for="message">Wiadomość</label>
-        <textarea id="message" [(ngModel)]="message" name="message" rows="5" required></textarea>
-      </div>
+<!--      <div class="form-group">-->
+<!--        <label for="message">Wiadomość</label>-->
+<!--        <textarea id="message" [(ngModel)]="message" name="message" rows="5" required></textarea>-->
+<!--      </div>-->
 
-      <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+<!--      <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>-->
 
-      <button type="submit" class="btn btn-primary" [disabled]="sending">
-        <span *ngIf="!sending">Wyślij</span>
-        <span *ngIf="sending"><i class="fas fa-spinner fa-spin"></i> Wysyłanie...</span>
-      </button>
+<!--      <button type="submit" class="btn btn-primary" [disabled]="sending">-->
+<!--        <span *ngIf="!sending">Wyślij</span>-->
+<!--        <span *ngIf="sending"><i class="fas fa-spinner fa-spin"></i> Wysyłanie...</span>-->
+<!--      </button>-->
 
-      <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
-      <div *ngIf="submitted" class="success-message">
-        <p>Dziękuję za kontakt! Odpowiem jak najszybciej.</p>
-      </div>
+<!--      <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>-->
+<!--      <div *ngIf="submitted" class="success-message">-->
+<!--        <p>Dziękuję za kontakt! Odpowiem jak najszybciej.</p>-->
+<!--      </div>-->
 
-    </form>
+<!--    </form>-->
 
-    <div *ngIf="submitted" class="success-message">
-      <p>Dziękuję za kontakt! Odpowiem jak najszybciej.</p>
-    </div>
-  </div>
+<!--    <div *ngIf="submitted" class="success-message">-->
+<!--      <p>Dziękuję za kontakt! Odpowiem jak najszybciej.</p>-->
+<!--    </div>-->
+<!--  </div>-->
 </div>

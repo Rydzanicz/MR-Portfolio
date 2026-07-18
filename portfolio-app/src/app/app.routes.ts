@@ -5,10 +5,20 @@ import {CvComponent} from './components/cv/cv.component';
 import {HomeComponent} from './components/home/home.component';
 import {ContactComponent} from './components/contact/contact.component';
 import {CollaborationComponent} from './components/collaboration/collaboration.component';
+import {PortfolioSelectorComponent} from './components/pages/portfolio-selector/portfolio-selector.component';
+import {VersionOneComponent} from './components/pages/portfolio-selector/versions/version-one/version-one.component';
+import {
+  VersionThreeComponent
+} from './components/pages/portfolio-selector/versions/version-three/version-three.component';
+import {VersionTwoComponent} from './components/pages/portfolio-selector/versions/version-two/version-two.component';
 
 export const routes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'portfolio', component: PortfolioComponent},
+  { path: 'portfolio-selector', component: PortfolioSelectorComponent },
+  {path: 'version-1', component: VersionOneComponent},
+  {path: 'version-2', component: VersionTwoComponent},
+  {path: 'version-3', component: VersionThreeComponent},
   {path: 'contact', component: ContactComponent},
   {path: 'cv', component: CvComponent},
   {path: 'wspolpraca', component: CollaborationComponent},

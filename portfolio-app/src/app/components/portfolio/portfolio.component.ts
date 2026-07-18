@@ -95,35 +95,58 @@ export class PortfolioComponent {
         "Automatyzacja maili i fakturowania"
       ]
     },
-{
-  id: 'creditAgricole',
-  company: 'Crédit Agricole',
-  period: '2026 - obecnie',
-  title: 'Integracja Systemów Bankowych i Komunikacja Międzysystemowa',
-  descriptionPoints: [
-    'Wdrożyłem nową funkcjonalność łączącą frontend z dwoma niezależnymi backendami, które pobierają dane z różnych źródeł.',
-    'Zaprojektowałem przepływ, w którym zebrane dane są automatycznie przesyłane do systemu firmy zewnętrznej.',
-    'Zaimplementowałem komunikację międzysystemową z wykorzystaniem REST, SOAP oraz Apache Kafka, zapewniając wysoką wydajność i odporność na błędy.'
-  ],
-  technologies: ['Java 21', 'Spring Boot', 'Angular 19', 'REST API', 'SOAP', 'Apache Kafka', 'PostgreSQL', 'Docker'],
-  features: [
-    'Integracja frontendu z dwoma niezależnymi backendami',
-    'Automatyczne przesyłanie danych do systemu firmy zewnętrznej',
-    'Komunikacja REST i SOAP z systemami partnerskimi',
-    'Asynchroniczna wymiana danych przez Apache Kafka',
-    'Monitorowanie i obsługa błędów w czasie rzeczywistym'
-  ],
-images: [
+    {
+      id: 'creditAgricole',
+      company: 'Crédit Agricole',
+      period: '2026 - obecnie',
+      title: 'Integracja Systemów Bankowych i Komunikacja Międzysystemowa',
+      descriptionPoints: [
+        'Wdrożyłem nową funkcjonalność łączącą frontend z dwoma niezależnymi backendami, które pobierają dane z różnych źródeł.',
+        'Zaprojektowałem przepływ, w którym zebrane dane są automatycznie przesyłane do systemu firmy zewnętrznej.',
+        'Zaimplementowałem komunikację międzysystemową z wykorzystaniem REST, SOAP oraz Apache Kafka, zapewniając wysoką wydajność i odporność na błędy.'
+      ],
+      technologies: ['Java 21', 'Spring Boot', 'Angular 19', 'REST API', 'SOAP', 'Apache Kafka', 'PostgreSQL', 'Docker'],
+      features: [
+        'Integracja frontendu z dwoma niezależnymi backendami',
+        'Automatyczne przesyłanie danych do systemu firmy zewnętrznej',
+        'Komunikacja REST i SOAP z systemami partnerskimi',
+        'Asynchroniczna wymiana danych przez Apache Kafka',
+        'Monitorowanie i obsługa błędów w czasie rzeczywistym'
+      ],
+      images: [
         'assets/images/CA/home.jpg',
         'assets/images/CA/shop.jpg',
       ],
-  achievements: [
-    'Zintegrowano dwa niezależne backendy z jednym frontendem',
-    'Wdrożono automatyczną wymianę danych z podmiotem zewnętrznym',
-    'Wprowadzono wielokanałową komunikację REST/SOAP/Kafka'
-  ],
-        link: 'https://www.credit-agricole.pl/klienci-indywidualni'
-}
+      achievements: [
+        'Zintegrowano dwa niezależne backendy z jednym frontendem',
+        'Wdrożono automatyczną wymianę danych z podmiotem zewnętrznym',
+        'Wprowadzono wielokanałową komunikację REST/SOAP/Kafka'
+      ],
+      link: 'https://www.credit-agricole.pl/klienci-indywidualni'
+    },
+    {
+      id: 'ATS',
+      company: 'A Tacy Sami',
+      period: '2026 - 2026',
+      title: 'Strona internetowa Fundacji "A Tacy Sami"',
+      descriptionPoints: [
+        'Wspomaganie działalności fundacji "A Tacy Sami" w zakresie strony internetowej.',
+        'Przejzystosc dokumatacji oraz wsparcie techniczne dla fundacji.'
+      ],
+      technologies: ['Java 21+', 'Spring Boot', 'Angular 19+'],
+      features: [
+        'Pobieranie plików z wsprawozadaniemi',
+        'Przejzystaoć do dokumentacji'
+      ],
+      images: [
+        'assets/images/ATS/logo.jpg'
+      ],
+      achievements: [
+        'Pobieranie plików z wsprawozadaniemi',
+        'Przejzystaoć do dokumentacji'
+      ],
+      link: '/portfolio-selector'
+    }
   ];
 
   get currentProject(): Project {
@@ -145,9 +168,11 @@ images: [
   isMobile(): boolean {
     return window.innerWidth <= 768;
   }
+
   isDesktop(): boolean {
     return !this.isMobile();
   }
+
   @HostListener('window:resize')
   onResize() {
     if (this.isDesktop()) {

@@ -1,0 +1,62 @@
+<div class="selector-container">
+  <div class="selector-header">
+    <div class="hero-badge">
+      <span class="status-dot"></span>
+      MR. Portfolio
+    </div>
+    <h1 class="selector-title">Wybierz wersję portfolio</h1>
+    <p class="selector-subtitle">Trzy warianty prezentacji projektu w jednym miejscu.</p>
+  </div>
+
+  <div class="selector-content">
+    <div class="wheel-wrapper">
+      <div class="wheel">
+        <a
+          *ngFor="let v of versions"
+          class="slice"
+          [class.hovered]="hoveredSegment === v.id"
+          [ngClass]="'slice-' + v.id"
+          [routerLink]="v.route"
+          (mouseenter)="hoveredSegment = v.id"
+          (mouseleave)="hoveredSegment = null"
+          [attr.aria-label]="v.label"
+        ></a>
+
+        <a
+          *ngFor="let v of versions"
+          class="slice-label"
+          [ngClass]="'label-' + v.id"
+          [class.hovered]="hoveredSegment === v.id"
+          [routerLink]="v.route"
+          (mouseenter)="hoveredSegment = v.id"
+          (mouseleave)="hoveredSegment = null"
+          [attr.aria-label]="v.label"
+        >
+          <i [class]="v.icon"></i>
+          <span>{{ v.label }}</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="versions-list">
+      <a
+        *ngFor="let v of versions"
+        class="version-card"
+        [class.active]="hoveredSegment === v.id"
+        [routerLink]="v.route"
+        (mouseenter)="hoveredSegment = v.id"
+        (mouseleave)="hoveredSegment = null"
+      >
+        <div class="version-icon">
+          <i [class]="v.icon"></i>
+        </div>
+        <div class="version-info">
+          <span class="version-period">{{ v.label }}</span>
+          <h3 class="version-name">{{ v.title }}</h3>
+          <p class="version-desc">{{ v.description }}</p>
+        </div>
+        <i class="fas fa-arrow-right version-arrow"></i>
+      </a>
+    </div>
+  </div>
+</div>

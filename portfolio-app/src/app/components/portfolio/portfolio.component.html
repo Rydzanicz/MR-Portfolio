@@ -14,7 +14,10 @@
           <image href="assets/images/goldenTag/Logo.png" x="130" y="130" width="300" height="300"/>
         </pattern>
         <pattern id="img-project3" patternUnits="userSpaceOnUse" width="400" height="400">
-          <image href="assets/images/CA/logo.jpg" x="40" y="120" width="300" height="350"/>
+          <image href="assets/images/CA/logo.jpg" x="30" y="140" width="300" height="300"/>
+        </pattern>
+        <pattern id="img-project4" patternUnits="userSpaceOnUse" width="400" height="400">
+          <image href="assets/images/ATS/logo.jpg" x="-40" y="-20" width="300" height="300" />
         </pattern>
       </defs>
       <g>
@@ -86,10 +89,34 @@
           (click)="selectProject(projects[2].id)" cursor="pointer"
         />
       </g>
+
+      <g>
+        <path
+          d="M200,200 L60,200 A140,140 0 0,1 200,60 L200,100 A100,100 0 0,0 100,200 Z"
+          fill="#27AE60" stroke="#111" stroke-width="8"
+          class="segment-base"
+          [ngClass]="{'segment-hidden': isDesktop() && hoveredSegment === 4}"
+        />
+        <path
+          [attr.d]="
+          isMobile()
+            ? 'M200,200 L30,200 A170,170 0 0,1 200,30 L200,120 A80,80 0 0,0 120,200 Z'
+            : hoveredSegment === 4
+              ? 'M200,200 L30,200 A170,170 0 0,1 200,30 L200,120 A80,80 0 0,0 120,200 Z'
+              : 'M200,200 L60,200 A140,140 0 0,1 200,60 L200,100 A100,100 0 0,0 100,200 Z'
+        "
+          fill="url(#img-project4)" stroke="#111" stroke-width="8"
+          class="segment-image"
+          [ngClass]="{'segment-expanded': isMobile() || hoveredSegment === 4}"
+          (mouseenter)="isDesktop() ? hoveredSegment = 4 : null"
+          (mouseleave)="isDesktop() ? hoveredSegment = null : null"
+          (click)="selectProject(projects[3].id)" cursor="pointer"
+        />
+      </g>
+
       <circle cx="200" cy="200" r="85" fill="#121212"/>
     </svg>
   </div>
-
   <div class="project-content">
     <div class="project-overview">
       <div class="project-info">
