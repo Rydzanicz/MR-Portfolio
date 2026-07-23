@@ -68,3 +68,18 @@
 .inne-item i { color: var(--brand); font-size: 1.15rem; margin-top: 3px; }
 .inne-item strong { display: block; font-size: .98rem; }
 .inne-item span { font-size: .88rem; color: var(--muted); }
+
+@media (max-width: 620px) {
+  .osoby-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+  .osoba { padding: 18px 10px; }
+  .avatar { width: 58px; height: 58px; font-size: 1.2rem; margin-bottom: 10px; }
+  .osoba strong { font-size: .95rem; }
+  .funkcja { font-size: .74rem; padding: 3px 10px; }
+  .inne-grid { grid-template-columns: 1fr; }
+  .grp-title { font-size: 1.2rem; margin: 30px 0 16px; }
+}
+
+@media (max-width: 380px) {
+  .osoby-grid { gap: 10px; }
+  .avatar { width: 52px; height: 52px; }
+}

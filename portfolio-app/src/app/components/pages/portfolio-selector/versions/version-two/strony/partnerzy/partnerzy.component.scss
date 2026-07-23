@@ -44,3 +44,16 @@
   font-size: .9rem;
   font-weight: 500;
 }
+
+@media (max-width: 620px) {
+  .logo-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+  .logo-card { padding: 14px; }
+  .logo-box { height: 84px; padding: 8px; margin-bottom: 10px; }
+  .logo-box img { max-height: 64px; }
+  .logo-card strong { font-size: .9rem; }
+  .logo-card span { font-size: .78rem; }
+}
+
+@media (max-width: 360px) {
+  .logo-box { height: 72px; }
+}

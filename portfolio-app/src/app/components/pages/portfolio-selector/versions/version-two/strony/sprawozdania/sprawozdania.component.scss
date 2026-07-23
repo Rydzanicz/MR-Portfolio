@@ -96,6 +96,17 @@
 .btn-pobierz:hover { background: var(--brand-dark); text-decoration: none; transform: translateY(-2px); }
 .btn-pobierz i { font-size: 1rem; }
 
+@media (max-width: 700px) {
+  .lista { grid-template-columns: 1fr; }
+}
+
 @media (max-width: 600px) {
   .bar-val { display: none; }
+  .bars { gap: 6px; height: 190px; }
+  .bar { border-radius: 5px 5px 0 0; }
+  .bar-lbl { font-size: .72rem; }
+  .wykres { padding: 16px; }
+  .rok { font-size: 1.7rem; }
+  .rok-stats { gap: 12px; font-size: .82rem; }
+  .btn-pobierz { padding: 13px 16px; }
 }
