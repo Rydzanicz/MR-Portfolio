@@ -35,10 +35,10 @@ export class HomeComponent implements OnInit {
 
   featuredProjects = [
     {
-      title: 'Platforma Bankowa Cinkciarz.pl',
+      title: 'Platforma Bankowa Credit-agricole.pl',
       description: 'System bankowy z automatyzacją procesów spłat i komunikacją z BIK',
       technologies: ['Java', 'Spring', 'PostgreSQL', 'Angular'],
-      image: 'assets/images/cinkciarz/strona.jpg',
+      image: 'assets/images/CA/home.jpg',
       link: '/portfolio'
     },
     {
