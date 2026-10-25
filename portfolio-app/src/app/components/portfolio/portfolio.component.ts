@@ -224,10 +224,10 @@ myResponsibilities: [
 
       achievements: [
         // facade i PP-generic
-        'Zintegrowano dwa niezależne systemy backendowe z wieloma aplikacjami frontendowymi',
-        'Zautomatyzowano wymianę danych z systemem podmiotu zewnętrznego',
-        'Wdrożono komunikację międzysystemową z wykorzystaniem REST API, SOAP oraz Apache Kafka',
-        'Zbudowano od podstaw nową aplikację w trybie pilnym, dzień przed planowanym wydaniem, w odpowiedzi na krytyczne potrzeby wdrożeniowe'
+        'Zintegrowanie dwa niezależne systemy backendowe z wieloma aplikacjami frontendowymi',
+        'Zautomatyzowanie wymianę danych z systemem podmiotu zewnętrznego',
+        'Wdrożonie komunikację międzysystemową z wykorzystaniem REST API, SOAP oraz Apache Kafka',
+        'Zbudowanie od podstaw nową aplikację w trybie pilnym, dzień przed planowanym wydaniem, w odpowiedzi na krytyczne potrzeby wdrożeniowe'
 
         // Kolega miał własną wizję projektu, ale nie potrafił jej sprzedać ani wytłumaczyć.
         // Dzień przed wydaniem przejąłem projekt i napisałem wszystkie podstawowe
@@ -249,29 +249,27 @@ myResponsibilities: [
         {
           title: 'Developer',
           description:
-          'Wdrażanie nowych osób do pracy z systemem, wyjaśnianie jego działania oraz proponowanie zakresu testów'
+          'Wdrażanie pracowników do pracy z nowym systemem poprzez całościowe wyjaśnienie jego działania oraz udzielanie propozycji zakresu testów aplikacji'
         },
         {
           title: 'Developer',
           description:
-          'Dostosowywanie funkcjonalności do zmieniających się wymagań biznesowych, przy niepełnych założeniach i ograniczonej możliwości testowania integracji z systemem zewnętrznym'
+          'Dostosowywanie funkcjonalności systemów do zmieniających się wymagań biznesowych i ograniczeń po stronie systemu zewnętrznego'
         },
         {
           title: 'Developer',
           description:
-          'Analiza zgłoszonych błędów i uwag oraz ich samodzielna realizacja lub przekazywanie do odpowiednich osób w zespole, zależnie od aktualnego podziału prac'
+          'Analiza zgłoszonych błędów i uwag oraz ich samodzielna realizacja lub przekazywanie do odpowiednich osób w zespole, w zależności od aktualnego podziału prac'
           //napraw lub odrzucenie błędów które są niezgodne z aktualnym projketem bo on jest płynny
         },
         {
           title: 'Developer',
           description:
-          'Koordynacja prac pomiędzy trzema niezależnymi serwisami odpowiedzialnymi za zbieranie danych i integrację z systemem zewnętrznym, zapis danych w bazie oraz dodatkową komunikację za pośrednictwem Apache Kafka'
-
+          'Rozdzielanie pracy w trzech serwisach tworzących jeden proces: integracji z systemem zewnętrznym, zapisu danych w bazie i komunikacji przez Apache Kafka'
           // facade — pobiera dane z wielu systemów.
           // PP-generic — baza danych.
           // PP-kafka — pobiera dane i zapisuje je do bazy danych.
         },
-
         {
           title: 'Analityk',
           description:
