@@ -324,7 +324,7 @@ myResponsibilities: [
         'Zapewniono przejrzysty dostęp do dokumentacji'
       ],
 
-      link: '/portfolio-selector'
+      link: 'https://a-tacy-sami.lm.r.appspot.com/atacysami/o-nas'
     }
   ];
 
