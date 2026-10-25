@@ -59,7 +59,7 @@ export class TranslationService {
       pdfSuccess: 'PDF został wygenerowany i pobrany pomyślnie!',
       pdfError: 'Wystąpił błąd podczas generowania PDF. Spróbuj ponownie.',
       currentPosition: 'FULL-STACK DEVELOPER',
-      profileDescription: 'Doświadczony full‑stack developer z ponad 3‑letnim doświadczeniem w projektach komercyjnych. Specjalizuje się w tworzeniu aplikacji webowych w oparciu o Java/Spring na backendzie oraz Angular na frontendzie, ze szczególnym naciskiem na przejrzystą architekturę i wysoką jakość kodu. Ma praktyczne doświadczenie w automatyzacji procesów biznesowych – m.in. budowie własnego systemu sklepowego do obsługi automatycznych zamówień i wysyłki maili z powiadomieniami i fakturami. Szuka nowych wyzwań technologicznych w środowisku, które ceni odpowiedzialność end‑to‑end za produkt, możliwość wpływu na rozwiązania oraz ciągły rozwój kompetencji.',
+      profileDescription: 'Doświadczony full‑stack developer z ponad 5‑letnim doświadczeniem w projektach komercyjnych. Specjalizuje się w tworzeniu aplikacji webowych w oparciu o Java/Spring na backendzie oraz Angular na frontendzie, ze szczególnym naciskiem na przejrzystą architekturę i wysoką jakość kodu. Ma praktyczne doświadczenie w automatyzacji procesów biznesowych – m.in. budowie własnego systemu sklepowego do obsługi automatycznych zamówień i wysyłki maili z powiadomieniami i fakturami. Szuka nowych wyzwań technologicznych w środowisku, które ceni odpowiedzialność end‑to‑end za produkt, możliwość wpływu na rozwiązania oraz ciągły rozwój kompetencji.',
       skillsList: [
         'Java 17+',
         'Spring Framework',
@@ -170,7 +170,7 @@ export class TranslationService {
       pdfSuccess: 'PDF has been generated and downloaded successfully!',
       pdfError: 'An error occurred while generating PDF. Please try again.',
       currentPosition: 'FULL-STACK DEVELOPER',
-      profileDescription: 'Experienced full‑stack developer with over 3 years of commercial experience. Specializes in building web applications using Java/Spring on the backend and Angular on the frontend, with a strong focus on clean architecture and high code quality. Has hands‑on experience in automating business processes – including designing and implementing a custom e‑commerce system for handling automatic orders and sending notification and invoice emails. Currently looking for new technological challenges in an environment that values end‑to‑end ownership of the product, real influence on technical decisions, and continuous skills development.',
+      profileDescription: 'Experienced full‑stack developer with over 5 years of commercial experience. Specializes in building web applications using Java/Spring on the backend and Angular on the frontend, with a strong focus on clean architecture and high code quality. Has hands‑on experience in automating business processes – including designing and implementing a custom e‑commerce system for handling automatic orders and sending notification and invoice emails. Currently looking for new technological challenges in an environment that values end‑to‑end ownership of the product, real influence on technical decisions, and continuous skills development.',
       skillsList: [
         'Java 17+',
         'Spring Framework',

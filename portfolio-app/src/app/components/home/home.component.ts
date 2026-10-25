@@ -17,7 +17,7 @@ export class HomeComponent implements OnInit {
   currentIndex = 0;
 
   stats = [
-    { number: '3+', label: 'Lata doświadczenia komercyjnego', icon: 'fas fa-briefcase' },
+    { number: '5+', label: 'Lata doświadczenia komercyjnego', icon: 'fas fa-briefcase' },
     { number: '1+', label: 'Lata doświadczenia freelance', icon: 'fas fa-user-tie' },
     { number: '1+', label: 'Lata doświadczenia utrzymania własnego sklepu', icon: 'fas fa-store' }
   ];
